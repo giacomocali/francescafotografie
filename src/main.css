@@ -2,35 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-.link-transition{
+::selection {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.link-transition {
     color: white;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.0); /* default shadow */
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.0);
+    /* default shadow */
     transition: color 0.15s ease-in-out;
     transition: box-shadow 0.15s ease-in-out;
 
-    &:hover{
-        color: #ebc786;
-        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), /* default shadow */
-                    0 0 0 10px rgba(255, 255, 255, 0.2), /* added shadow */
-                    0 0 0 20px rgba(255, 255, 255, 0.05); /* added shadow */
+    &:hover {
+        color: #ecce97;
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5),
+            /* default shadow */
+            0 0 0 10px rgba(255, 255, 255, 0.2),
+            /* added shadow */
+            0 0 0 20px rgba(255, 255, 255, 0.05);
+        /* added shadow */
     }
 }
 
-.social-link-transition{
-    &:hover img{
+.social-link-transition {
+    &:hover img {
         transition: filter 0.3s ease-in-out;
         filter: grayscale(0) brightness(2);
     }
 }
 
-.link-transition2{
+.link-transition2 {
     color: white;
-    filter:none;
+    filter: none;
     transition: color 0.15s ease-in-out;
     transition: filter 0.15s ease-in-out;
 
-    &:hover{
-        color: #ebc786;
+    &:hover {
+        color: #ecce97;;
         filter: drop-shadow(0px 6px 6px #ffbb00);
     }
 }
@@ -42,25 +50,25 @@
     background-position: center;
 }
 
-#landing{
+#landing {
     height: 100vh;
     width: 99vw;
 }
 
-#landing-nav{
-    background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0,0.0));
+#landing-nav {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));
 }
 
-#landing-card-container{
+#landing-card-container {
     margin-left: 20%;
 }
 
-#portfolio-bg{
+#portfolio-bg {
     background: linear-gradient(to bottom right,
-     rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 1.0));
+            rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 1.0));
 }
 
-#portfolio-card{
+#portfolio-card {
     background-image: url('assets/esterni12.jpg');
     background-size: cover;
     background-repeat: no-repeat;

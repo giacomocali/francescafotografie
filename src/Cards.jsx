@@ -3,7 +3,7 @@ import './main.css';
 export function LandingCardTransparent({ header, body }) {
     return (
         <div
-            className="bg-white rounded-xl bg-opacity-10 backdrop-blur-md text-white px-7 py-7"
+            className="bg-opacity-10 rounded-xl backdrop-blur-md text-white px-7 py-7"
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="1000"
