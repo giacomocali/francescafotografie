@@ -6,9 +6,11 @@ export default function Landing() {
     return (
         <div id='landing-background'>
             <Header />
-            <section className='flex items-center' id='landing'>
+            <section className='flex items-center' 
+            id='main-section'>
                 <div id='landing-card-container'>
-                    <LandingCardTransparent header='Francesca Calì' body='Fotografa per eventi' />
+                    <LandingCardTransparent header='Francesca Calì' 
+                    body='Fotografa per eventi' />
                 </div>
             </section>
             <Footer />

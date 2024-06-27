@@ -4,8 +4,10 @@ import './main.css'
 
 import { Router } from 'preact-router';
 
-import Portfolio from './Portfolio';
 import Landing from './Landing';
+import Portfolio from './Portfolio';
+import Aboutme from './Aboutme';
+import { Contact } from './Contact';
 
 export function App() {
   AOS.init();
@@ -13,6 +15,8 @@ export function App() {
     <Router>
       <Landing path="/"/>
       <Portfolio path="/portfolio" /> 
+      <Aboutme path="/about" />
+      <Contact path="/contact"/>  
     </Router>
   )
 }

@@ -3,7 +3,7 @@ import './main.css';
 export function LandingCardTransparent({ header, body }) {
     return (
         <div
-            className="bg-opacity-10 rounded-xl backdrop-blur-md text-white px-7 py-7"
+            className="rounded-xl backdrop-blur-lg text-white px-7 py-7"
             data-aos="fade-up"
             data-aos-delay="300"
             data-aos-duration="1000"
@@ -18,8 +18,8 @@ export function LandingCardTransparent({ header, body }) {
 
 export function PortfolioCard({ text }) {
     return (
-        <div id="portfolio-card" class="flex justify-center items-center min-w-32 min-h-96">
-            <h3 className="text-5xl text-white"> {text} </h3>
+        <div id="portfolio-card" class="-z-0 flex justify-center items-center lg:w-96 lg:h-96 md:w-96 md:h-96 sm:w-50 sm:h-96">
+            <h3 className="text-5xl text-white z-10"> {text} </h3>
         </div>
     );
 }

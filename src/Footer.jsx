@@ -1,6 +1,7 @@
 export function Footer() {
     return (
-        <footer className="bg-neutral-900 flex justify-around p-10 text-white">
+        <footer
+            className="bg-neutral-900 z-50 flex justify-around items-center p-10 text-white">
             <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
