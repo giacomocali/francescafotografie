@@ -1,19 +1,17 @@
-import Header from './Headers.jsx'
-import { Footer } from './Footer.jsx';
-import { LandingCardTransparent } from './Cards.jsx';
+import Header from '../components/Headers.jsx'
+import Footer2 from '../components/Footer2.jsx';
+import { LandingCardTransparent, LandingCard } from '../components/Cards.jsx';
 
 export default function Landing() {
     return (
         <div id='landing-background'>
             <Header />
-            <section className='flex items-center' 
+            <section className='flex items-center justify-center' 
             id='main-section'>
-                <div id='landing-card-container'>
-                    <LandingCardTransparent header='Francesca Calì' 
+                    <LandingCard header='Francesca Calì' 
                     body='Fotografa per eventi' />
-                </div>
             </section>
-            <Footer />
+            <Footer2 />
         </div>
     );
 }

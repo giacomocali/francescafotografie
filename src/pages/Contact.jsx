@@ -1,7 +1,7 @@
-import Header from "./Headers"
-import { Footer } from "./Footer"
+import Header from "../components/Headers"
+import Footer2 from "../components/Footer2"
 
-export function Contact(){
+export default function Contact(){
     return <div id="portfolio-bg">
         <Header />
         <section class="pt-36 text-white" id="main-section">
@@ -10,6 +10,6 @@ export function Contact(){
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
         </section>
-        <Footer />
+        <Footer2 />
     </div>
 }

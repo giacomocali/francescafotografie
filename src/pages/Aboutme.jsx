@@ -1,5 +1,5 @@
-import Header from "./Headers"
-import { Footer } from "./Footer"
+import Header from "../components/Headers"
+import Footer2 from "../components/Footer2"
 
 export default function Aboutme() {
     return <div id="portfolio-bg">
@@ -26,6 +26,6 @@ export default function Aboutme() {
             </div> 
             
         </section>
-        <Footer />
+        <Footer2 />
     </div>
 }

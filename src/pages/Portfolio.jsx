@@ -1,6 +1,6 @@
-import Header from "./Headers"
-import { PortfolioCard } from "./Cards"
-import { Footer } from "./Footer"
+import Header from "../components/Headers"
+import { PortfolioCard } from "../components/Cards"
+import Footer2 from "../components/Footer2"
 
 export default function Portfolio() {
     return <div id="portfolio-bg">
@@ -22,6 +22,6 @@ export default function Portfolio() {
                 <PortfolioCard text={"Categoria2"}/>
             </div>
         </section>
-        <Footer />
+        <Footer2 />
     </div>
 }
