@@ -15,6 +15,10 @@
   src: url(./assets/fonts/Playwrite_FR_Moderne/PlaywriteFRModerne-VariableFont_wght.ttf);
 }
 
+body{
+    font-family: urbanist;
+}
+
 .playwrite {
   font-family: playwrite;
 }
@@ -26,18 +30,17 @@
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .standard-btn-hover {
   background-color: transparent;
   color: white;
-  transition: color 1s ease-in-out;
-  transition: background-color 1s ease-in-out;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 
   &:hover {
-      color: #212121;
-      background-color: white;
+    color: #212121;
+    background-color: white;
   }
 }
 
@@ -77,7 +80,8 @@
 }
 
 #landing-background {
-  background-image: url("assets/esterni12.jpg");
+  background-image: url("./assets/images/esterni12.jpg");
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -102,7 +106,7 @@
 }
 
 #portfolio-card {
-  background-image: url("assets/esterni12.jpg");
+  background-image: url("assets/images/esterni12.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

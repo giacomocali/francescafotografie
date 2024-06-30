@@ -14,7 +14,7 @@ export default function Portfolio() {
 
             <div 
                 className="grid lg:grid-cols-4 md:grid-cols-3 mt-20 mx-16 gap-20 sm:grid-cols-2"
-                data-aos="fade-in" data-aos-delay="400"
+                data-aos="fade-in" data-aos-delay="300"
             >
                 <PortfolioCard text={"Evento1"}/>
                 <PortfolioCard text={"Evento2"}/>
