@@ -1,33 +1,6 @@
 import "../main.css";
-import { Link } from "./Links";
 
-export function LandingCard({ header, body }) {
-  return (
-    <div
-      className="text-white px-7 py-7"
-      data-aos="fade-up"
-      data-aos-delay="300"
-      data-aos-duration="1000"
-    >
-      <div className="mb-10 text-center">
-        <h1 className="playwrite text-7xl mb-4"> {header} </h1>
-        <p className="urbanist text-4xl mb-10"> {body} </p>
-        <Link
-          text="Pacchetti"
-          type="standard"
-          useAos={true}
-          href={"/services"}
-        />
-        <Link
-          text="Galleria"
-          type="standard"
-          useAos={true}
-          href={"/portfolio"}
-        />
-      </div>
-    </div>
-  );
-}
+// LANDING CARDS ================================================
 
 export function LandingCardTransparent({ header, body }) {
   return (
@@ -40,22 +13,13 @@ export function LandingCardTransparent({ header, body }) {
     >
       <div className="mb-20">
         <h1 className="playwrite text-6xl mb-4"> {header} </h1>
-        <p className="urbanist text-4xl"> {body} </p>
+        <p className="text-4xl"> {body} </p>
       </div>
     </div>
   );
 }
 
-export function PortfolioCard({ text }) {
-  return (
-    <div
-      id="portfolio-card"
-      class="-z-0 flex justify-center items-center lg:w-96 lg:h-96 md:w-96 md:h-96 sm:w-50 sm:h-96"
-    >
-      <h3 className="text-5xl text-white z-10"> {text} </h3>
-    </div>
-  );
-}
+// CONTACT CARD ================================================
 
 export function ContactCard({ text }) {
   return (
@@ -67,6 +31,8 @@ export function ContactCard({ text }) {
     </div>
   );
 }
+
+// PACKETS CARD ================================================
 
 export function PacketsCard({ title, color, description, advantages }) {
   var titleClass = "";
@@ -87,15 +53,13 @@ export function PacketsCard({ title, color, description, advantages }) {
     <div
       id="packets-card"
       data-aos="fade-in"
-      data-aos-delay="300"
+      data-aos-delay="200"
       class="p-5 m-5 items-center bg-white text-black text-center
           rounded-lg shadow-2xl max-w-72"
     >
       <div class={titleClass}>
         <h2 className="text-2xl text-center text-neutral-800">{title}</h2>
       </div>
-
-
 
       <article className="text-xl text-center text-wrap max-w-60">
         

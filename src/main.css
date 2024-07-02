@@ -15,8 +15,17 @@
   src: url(./assets/fonts/Playwrite_FR_Moderne/PlaywriteFRModerne-VariableFont_wght.ttf);
 }
 
+@font-face{
+  font-family: comforta;
+  src: url(./assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
 body{
     font-family: urbanist;
+}
+
+.comforta{
+  font-family: comforta;
 }
 
 .playwrite {
@@ -30,7 +39,7 @@ body{
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 242, 124, 0.5);
 }
 
 .standard-btn-hover {
@@ -96,7 +105,7 @@ body{
   margin-left: 20%;
 }
 
-#portfolio-bg {
+#generic-bg {
   background: linear-gradient(
     to bottom right,
     rgba(0, 0, 0, 0.82),
@@ -105,11 +114,31 @@ body{
   );
 }
 
-#portfolio-card {
+#gallery-stripe {
+  position:relative;
+  z-index: 1;
+
   background-image: url("assets/images/esterni12.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* Create the overlay using ::before */
+#gallery-stripe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  z-index: -1; /* Place the overlay behind the content */
+  transition: background-color 0.2s ease; /* Smooth transition */
+}
+
+#gallery-stripe:hover::before {
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity to the desired level */
 }
 
 #main-nav {
