@@ -20,6 +20,9 @@ importers:
       preact-router:
         specifier: ^4.1.2
         version: 4.1.2(preact@10.22.0)
+      spotlight.js:
+        specifier: ^0.7.8
+        version: 0.7.8
     devDependencies:
       '@preact/preset-vite':
         specifier: ^2.8.2
@@ -947,6 +950,9 @@ packages:
   source-map@0.7.4:
     resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
     engines: {node: '>= 8'}
+
+  spotlight.js@0.7.8:
+    resolution: {integrity: sha512-zq822gqhjaMHt31oZi4do211NwqBcxZ4u7Xtb+OEsbLrz37dcELhBCoQXFu/0sTiomqD6tm5g6tmqvE7S6h4ng==}
 
   stack-trace@1.0.0-pre2:
     resolution: {integrity: sha512-2ztBJRek8IVofG9DBJqdy2N5kulaacX30Nz7xmkYF6ale9WBVmIy6mFBchvGX7Vx/MyjBhx+Rcxqrj+dbOnQ6A==}
@@ -1904,6 +1910,8 @@ snapshots:
   source-map-js@1.2.0: {}
 
   source-map@0.7.4: {}
+
+  spotlight.js@0.7.8: {}
 
   stack-trace@1.0.0-pre2: {}
 

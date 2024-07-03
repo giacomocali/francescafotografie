@@ -39,13 +39,13 @@ export function PacketsCard({ title, color, description, advantages }) {
 
   switch (color) {
     case "base":
-      titleClass = "bg-neutral-300 shadow-lg py-3 px-10 rounded-lg";
+      titleClass = "base-card shadow-lg py-3 px-10 rounded-lg";
       break;
     case "standard":
-      titleClass = "bg-blue-300 shadow-lg py-3 px-10 rounded-lg";
+      titleClass = "standard-card shadow-lg py-3 px-10 rounded-lg";
       break;
     case "premium":
-      titleClass = "bg-yellow-300 shadow-lg py-3 px-10 rounded-lg";
+      titleClass = "premium-card shadow-lg py-3 px-10 rounded-lg";
       break;
   }
 
@@ -54,28 +54,34 @@ export function PacketsCard({ title, color, description, advantages }) {
       id="packets-card"
       data-aos="fade-in"
       data-aos-delay="200"
-      class="p-5 m-5 items-center bg-white text-black text-center
-          rounded-lg shadow-2xl max-w-72"
+      class="p-5 m-5 bg-white text-neutral-900 text-center
+          rounded-lg shadow-2xl min-w-72 max-w-80 relative"
     >
       <div class={titleClass}>
-        <h2 className="text-2xl text-center text-neutral-800">{title}</h2>
+        <h2 className="text-xl text-center">{title}</h2>
       </div>
 
-      <article className="text-xl text-center text-wrap max-w-60">
-        
+      <article className="text-xl text-center text-wrap mb-28">
         <div class="my-5">{description}</div>
-        <ul>
+        <ul class="mb-5">
           {advantages.map((advantage, index) => (
-            <li key={index}>
-              <img
-                src="../assets/images/placeholder.jpg"
-                className="w-3"
-              />
-              {advantage}{" "}
+            <li key={index} class="flex my-2">
+              <img src="./src/assets/images/placeholder.jpg" className="w-7 mr-5" />
+              {advantage}
             </li>
           ))}
         </ul>
       </article>
+      <a
+        class="w-full absolute bottom-0 left-0 rounded-lg py-3
+          flex items-center text-xl outline outline-green-300 outline-4
+        bg-green-300 hover:bg-green-600 hover:outline-green-600 active:outline-0"
+      href="https://wa.me/393883032432"
+      target="_blank"
+      >
+        Per conoscere i prezzi, contattami su Whatsapp
+        <img src="./src/assets/icons/whatsapp-icon-colored.png" alt="whatsapp icon" class="w-10 h-10 mr-3" />
+      </a>
     </div>
   );
 }

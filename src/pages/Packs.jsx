@@ -9,7 +9,7 @@ export default function Packs() {
     title: "Pacchetto base",
     color: "base",
     description:
-      "Servizio di base per i clienti principali. Lorem ipsum dolor sit amet",
+      "Servizio di base per i clienti principali. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
     advantages: ["Vantaggio uno", "Vantaggio due", "Vantaggio tre"],
   };
   const standardCard = {
@@ -29,11 +29,12 @@ export default function Packs() {
 
   return (
     <div id="generic-bg">
-      <Header />
-      <section class="pt-36 text-white" id="main-section">
-        <h1 class="text-5xl playwrite text-center mb-16" data-aos="fade-in">
+      <Header nested={false}/>
+      <section class="pt-40 text-white" id="main-section">
+        <h1 class="text-6xl font-medium text-center mb-5" data-aos="fade-in">
           Pacchetti
         </h1>
+        <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in"/>
 
         <div class="flex justify-center">
           <div class="flex justify-evenly">

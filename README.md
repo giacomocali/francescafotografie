@@ -7,3 +7,4 @@
 - Preact
 - Tailwind CSS
 - AOS (Animate On Scroll)
+- Spotlight.js

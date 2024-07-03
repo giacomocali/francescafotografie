@@ -4,7 +4,7 @@ import Footer2 from "../components/Footer2";
 export default function Aboutme() {
   return (
     <div id="generic-bg">
-      <Header />
+      <Header nested={false}/>
       <section class="pt-36" id="main-section">
         <div class="flex justify-around items-center mx-64 mt-52 text-white">
           <div data-aos="fade-up">

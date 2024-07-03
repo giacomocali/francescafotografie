@@ -4,6 +4,7 @@ import './main.css'
 
 import { Router } from 'preact-router';
 import { useState } from 'preact/hooks';
+import { useEffect } from 'preact/hooks';
 
 import Landing from './pages/Landing';
 import Gallery from './pages/Gallery';
@@ -14,7 +15,16 @@ import { Photos } from './pages/Photos';
 
 export function App() {
   AOS.init();
-  const [photoCategory, setPhotoCategory] = useState('');
+  const [photoCategory, setPhotoCategory] = useState(()=>{
+    const localCategoryVal = localStorage.getItem("photoCategory");
+    if(localCategoryVal == null) return '';
+
+    return localCategoryVal;
+  });
+
+  useEffect(()=>{
+    localStorage.setItem("photoCategory", photoCategory)
+  }, [photoCategory]);
 
   return (
       <Router>

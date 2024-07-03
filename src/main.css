@@ -22,6 +22,7 @@
 
 body{
     font-family: urbanist;
+    color:white;
 }
 
 .comforta{
@@ -39,8 +40,12 @@ body{
 }
 
 ::selection {
-  background: rgba(255, 242, 124, 0.5);
+  background: rgba(235, 223, 116, 0.9);
 }
+
+.premium-card{background: linear-gradient(#f0d39d, #ffbb00);}
+.standard-card{background: linear-gradient(#b9d6f1, #4a9eec);}
+.base-card{background:linear-gradient(#dddddd, #bdbdbd);}
 
 .standard-btn-hover {
   background-color: transparent;

@@ -5,7 +5,7 @@ import { Link } from "../components/Links";
 export default function Landing() {
     return (
         <div id='landing-background'>
-            <Header />
+            <Header nested={false}/>
             <section className='flex items-center justify-center' 
             id='main-section'>
                     <LandingCard header='Francesca Calì' 
@@ -15,7 +15,6 @@ export default function Landing() {
         </div>
     );
 }
-
 
 // function LandingTitle({ header, body }) {
 //     return (
