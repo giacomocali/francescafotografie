@@ -1,20 +1,27 @@
 import Header from "../components/Headers";
 import {
   battesimoLandscape,
-  battesimoOther,
   battesimoPortrait,
+  
   compleannoLandscape,
   compleannoPortrait,
-  compleannoOther,
+  
+  laureaLandscape,
+  laureaPortrait,
 } from "../photoSources";
 import { Suspense } from "preact/compat";
 
 export function Photos({ photoCategory }) {
+  
+  globalThis.scrollTo({top:0, left:0});
+
   switch (photoCategory) {
     case "battesimo":
       return galleryBase({ content: battesimoGallery() });
     case "compleanno":
       return galleryBase({ content: compleannoGallery() });
+      case "laurea":
+        return galleryBase({ content: laureaGallery() });
     default:
       return (
         <h1 class="text-red-600 text-center text-7xl mt-16">
@@ -50,13 +57,15 @@ function galleryTitle({ title }) {
 function gridPhoto({ src }) {
   return (
     <Suspense
-      fallback={
-        <div class="text-7xl text-red-500">
-          LOOOOOAAAAAADDDDIIIIIINNNNNNGGGGGGGG
-        </div>
-      }
+      fallback={<img src="../../src/assets/loading0.gif" alt={"loading"} />}
     >
-      <img src={src} alt="fotografia" class="w-auto outline outline-8 rounded-xl" />
+      <a class="spotlight" href={src} data-play="100" data-progress="true" data-title="false" >
+        <img
+          src={src}
+          class="w-auto outline outline-8 outline-black"
+          alt="fotografia"
+        />
+      </a>
     </Suspense>
   );
 }
@@ -76,11 +85,7 @@ function battesimoGallery() {
           {battesimoLandscape.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          <div class="text-4xl text-purple-500">PORTRAIT</div>
           {battesimoPortrait.map((photo) => {
-            return gridPhoto({ src: photo });
-          })}
-          {battesimoOther.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
@@ -105,7 +110,27 @@ function compleannoGallery() {
           {compleannoPortrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          {compleannoOther.map((photo) => {
+        </div>
+      </article>
+    </>
+  );
+}
+
+function laureaGallery() {
+  return (
+    <>
+      {galleryTitle({ title: "Laurea" })}
+      <article class="flex justify-evenly w-full">
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
+          data-aos="fade-in"
+          data-aos-delay="200"
+        >
+          {laureaLandscape.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+          <br/>
+          {laureaPortrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
