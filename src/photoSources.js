@@ -64,20 +64,49 @@ export const compleannoPortrait = [
 
 // LAUREA ========================================
 
-export const laureaLandscape = [
-    '../../src/assets/images/laurea/landscape0.jpg',
-    '../../src/assets/images/laurea/landscape1.jpg',
-    '../../src/assets/images/laurea/landscape2.jpg',
+export const laureaPhotos = [
+    '../../src/assets/images/laurea/laurea.jpg',
+    '../../src/assets/images/laurea/laurea1.jpg',
+    '../../src/assets/images/laurea/laurea2.jpg',
+    '../../src/assets/images/laurea/laurea3.jpg',
+    '../../src/assets/images/laurea/laurea4.jpg',
+    '../../src/assets/images/laurea/laurea5.jpg',
+    '../../src/assets/images/laurea/laurea6.jpg',
+    '../../src/assets/images/laurea/laurea7.jpg',
+    '../../src/assets/images/laurea/laurea8.jpg',
+]
+
+
+// RITRATTO
+
+export const ritrattoLandscape = [
+    "../../src/assets/images/ritratto/landscape.jpg",
+    "../../src/assets/images/ritratto/landscape1.jpg",
+    "../../src/assets/images/ritratto/landscape2.jpg",
+    "../../src/assets/images/ritratto/landscape3.jpg",
+    "../../src/assets/images/ritratto/landscape4.jpg"
 ];
 
-export const laureaPortrait = [
-    '../../src/assets/images/laurea/portrait0.jpg',
-    '../../src/assets/images/laurea/portrait1.jpg',
-    '../../src/assets/images/laurea/portrait2.jpg',
-    '../../src/assets/images/laurea/portrait3.jpg',
-    '../../src/assets/images/laurea/portrait4.jpg',
-    '../../src/assets/images/laurea/portrait5.jpg',
-    '../../src/assets/images/laurea/portrait6.jpg',
-    '../../src/assets/images/laurea/portrait8.jpg',
-    '../../src/assets/images/laurea/portrait9.jpg',
+export const ritrattoPortrait = [
+    "../../src/assets/images/ritratto/portrait.jpg",
+    "../../src/assets/images/ritratto/portrait1.jpg",
+    "../../src/assets/images/ritratto/portrait2.jpg",
+    "../../src/assets/images/ritratto/portrait3.jpg",
+    "../../src/assets/images/ritratto/portrait4.jpg",
+    "../../src/assets/images/ritratto/portrait5.jpg",
+    "../../src/assets/images/ritratto/portrait6.jpg",
+    "../../src/assets/images/ritratto/portrait7.jpg",
+    "../../src/assets/images/ritratto/portrait8.jpg",
+    "../../src/assets/images/ritratto/portrait9.jpg",
+    "../../src/assets/images/ritratto/portrait10.jpg",
+    "../../src/assets/images/ritratto/portrait11.jpg",
+    "../../src/assets/images/ritratto/portrait12.jpg",
+    "../../src/assets/images/ritratto/portrait13.jpg",
+    "../../src/assets/images/ritratto/portrait14.jpg",
+    "../../src/assets/images/ritratto/portrait15.jpg",
+    "../../src/assets/images/ritratto/portrait16.jpg",
+    "../../src/assets/images/ritratto/portrait17.jpg",
+    "../../src/assets/images/ritratto/portrait18.jpg",
+    "../../src/assets/images/ritratto/portrait19.jpg",
+    "../../src/assets/images/ritratto/portrait20.jpg",
 ];

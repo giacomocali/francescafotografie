@@ -43,8 +43,21 @@ body{
   background: rgba(235, 223, 116, 0.9);
 }
 
-.premium-card{background: linear-gradient(#f0d39d, #ffbb00);}
-.standard-card{background: linear-gradient(#b9d6f1, #4a9eec);}
+
+#main-nav {
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+
+.premium-card{background: linear-gradient(#f1d39c, #ffbb00);}
+.standard-card{background: linear-gradient(#afcbe7, #4a9eec);}
 .base-card{background:linear-gradient(#dddddd, #bdbdbd);}
 
 .standard-btn-hover {
@@ -74,12 +87,12 @@ body{
   }
 }
 
-.social-link-transition {
+/* .social-link-transition {
   &:hover img {
     transition: filter 0.3s ease-in-out;
     filter: grayscale(0) brightness(2);
   }
-}
+} */
 
 .link-transition2 {
   color: white;
@@ -119,40 +132,49 @@ body{
   );
 }
 
-#gallery-stripe {
-  position:relative;
-  z-index: 1;
-
-  background-image: url("assets/images/esterni12.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 /* Create the overlay using ::before */
-#gallery-stripe::before {
+.gallery-stripe::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  background-color: rgba(0, 0, 0, 0.2); /* Initially transparent */
   z-index: -1; /* Place the overlay behind the content */
   transition: background-color 0.2s ease; /* Smooth transition */
 }
 
-#gallery-stripe:hover::before {
+.gallery-stripe:hover::before {
   background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity to the desired level */
 }
 
-#main-nav {
-  mask-image: linear-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0)
-  );
+
+#stripe-battesimo {
+  background-image: url("./assets/images/battesimo/landscape.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#stripe-compleanno {
+  background-image: url("./assets/images/compleanno/landscape7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#stripe-laurea {
+  background-image: url("./assets/images/laurea/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#stripe-ritratto {
+  background-image: url("./assets/images/ritratto/landscape3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

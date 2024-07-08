@@ -14,7 +14,7 @@ export default function Header({ nested }) {
 
   return (
     <nav
-      className="backdrop-blur-lg fixed z-10 w-full py-7 text-white text-lg"
+      className="backdrop-blur-lg fixed z-40 w-full py-7 text-white text-lg"
       id="main-nav"
     >
       <div className="flex justify-around items-center font-light">

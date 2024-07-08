@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "animejs": "^3.2.2",
     "aos": "3.0.0-beta.6",
     "pnpx": "^0.0.1",

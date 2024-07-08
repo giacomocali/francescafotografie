@@ -7,7 +7,7 @@ export default function Aboutme() {
       <Header nested={false}/>
       <section class="pt-20" id="main-section">
         <div class="flex justify-around items-center mx-64 mt-52 text-white">
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-duration="1000">
             <h1 class="text-5xl mb-3"> Chi sono: </h1>
             <div class="text-2xl">
               Ciao! Sono Francesca Calì, una fotografa da Roma. <br/>
@@ -20,7 +20,7 @@ export default function Aboutme() {
             </div>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <img
               src="./src/assets/images/placeholder.jpg"
               alt="foto francesca"

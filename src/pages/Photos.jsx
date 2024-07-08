@@ -2,26 +2,26 @@ import Header from "../components/Headers";
 import {
   battesimoLandscape,
   battesimoPortrait,
-  
   compleannoLandscape,
   compleannoPortrait,
-  
-  laureaLandscape,
-  laureaPortrait,
+  laureaPhotos,
+  ritrattoLandscape,
+  ritrattoPortrait
 } from "../photoSources";
 import { Suspense } from "preact/compat";
 
 export function Photos({ photoCategory }) {
-  
-  globalThis.scrollTo({top:0, left:0});
+  globalThis.scrollTo({ top: 0, left: 0 });
 
   switch (photoCategory) {
     case "battesimo":
       return galleryBase({ content: battesimoGallery() });
     case "compleanno":
       return galleryBase({ content: compleannoGallery() });
-      case "laurea":
-        return galleryBase({ content: laureaGallery() });
+    case "laurea":
+      return galleryBase({ content: laureaGallery() });
+    case "ritratto":
+      return galleryBase({ content: ritrattoGallery() });
     default:
       return (
         <h1 class="text-red-600 text-center text-7xl mt-16">
@@ -59,7 +59,15 @@ function gridPhoto({ src }) {
     <Suspense
       fallback={<img src="../../src/assets/loading0.gif" alt={"loading"} />}
     >
-      <a class="spotlight" href={src} data-play="100" data-progress="true" data-title="false" >
+      <a
+        class="spotlight self-center"
+        href={src}
+        data-aos="fade-in"
+        data-aos-once="true"
+        data-play="100"
+        data-progress="true"
+        data-title="false"
+      >
         <img
           src={src}
           class="w-auto outline outline-8 outline-black"
@@ -126,11 +134,29 @@ function laureaGallery() {
           data-aos="fade-in"
           data-aos-delay="200"
         >
-          {laureaLandscape.map((photo) => {
+          {laureaPhotos.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          <br/>
-          {laureaPortrait.map((photo) => {
+        </div>
+      </article>
+    </>
+  );
+}
+
+function ritrattoGallery() {
+  return (
+    <>
+      {galleryTitle({ title: "Ritratto" })}
+      <article class="flex justify-evenly w-full">
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
+          data-aos="fade-in"
+          data-aos-delay="200"
+        >
+          {ritrattoLandscape.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+          {ritrattoPortrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
