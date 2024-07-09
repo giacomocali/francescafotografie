@@ -35,9 +35,9 @@ export default function Gallery({ setPhotoCategory }) {
             category={"ritratto"}
             setCategory={setPhotoCategory}
           />
+          <Footer2 />
         </div>
       </section>
-      <Footer2 />
     </div>
   );
 }

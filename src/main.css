@@ -15,17 +15,17 @@
   src: url(./assets/fonts/Playwrite_FR_Moderne/PlaywriteFRModerne-VariableFont_wght.ttf);
 }
 
-@font-face{
+@font-face {
   font-family: comforta;
   src: url(./assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
 
-body{
-    font-family: urbanist;
-    color:white;
+body {
+  font-family: urbanist;
+  color: white;
 }
 
-.comforta{
+.comforta {
   font-family: comforta;
 }
 
@@ -43,7 +43,6 @@ body{
   background: rgba(235, 223, 116, 0.9);
 }
 
-
 #main-nav {
   mask-image: linear-gradient(
     rgba(0, 0, 0, 1),
@@ -55,10 +54,28 @@ body{
   );
 }
 
+.premium-card {
+  background: linear-gradient(#f1d39c, #ffbb00);
+}
+.standard-card {
+  background: linear-gradient(#afcbe7, #4a9eec);
+}
+.base-card {
+  background: linear-gradient(#dddddd, #bdbdbd);
+}
 
-.premium-card{background: linear-gradient(#f1d39c, #ffbb00);}
-.standard-card{background: linear-gradient(#afcbe7, #4a9eec);}
-.base-card{background:linear-gradient(#dddddd, #bdbdbd);}
+/* .card2-bg {
+  background: rgb(255, 192, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 192, 0, 1) 0%,
+    rgba(255, 227, 115, 1) 100%
+  );
+} */
+
+.card-bg1 {
+  background: #5eff44
+}
 
 .standard-btn-hover {
   background-color: transparent;
@@ -132,7 +149,6 @@ body{
   );
 }
 
-
 /* Create the overlay using ::before */
 .gallery-stripe::before {
   content: "";
@@ -147,9 +163,13 @@ body{
 }
 
 .gallery-stripe:hover::before {
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity to the desired level */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Adjust the opacity to the desired level */
 }
-
 
 #stripe-battesimo {
   background-image: url("./assets/images/battesimo/landscape.jpg");
