@@ -14,11 +14,8 @@ function StandardButton({ text, useAos, href }) {
     return (
       <a
         href={href}
-        className="rounded-sm outline outline-white text-xl 
-        px-6 py-3 m-5 standard-btn-hover"
-        data-aos="fade-up"
-        data-aos-delay="300"
-        data-aos-duration="1000"
+        className="rounded-lg outline outline-white text-xl 
+        px-6 py-3 m-5 standard-btn active:outline-0"
       >
         {text}
       </a>

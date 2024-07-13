@@ -8,7 +8,7 @@ export default function Landing() {
             <Header nested={false}/>
             <section className='flex items-center justify-center' 
             id='main-section'>
-                    <LandingCard header='Francesca Calì' 
+                    <LandingContent header='Francesca Calì' 
                     body='Fotografa per eventi' />
             </section>
             <Footer2 />
@@ -29,7 +29,7 @@ export default function Landing() {
 //     );
 // }
 
-function LandingCard({ header, body }) {
+function LandingContent({ header, body }) {
     return (
       <div
         className="text-white px-7 py-7"

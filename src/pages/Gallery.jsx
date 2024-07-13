@@ -2,17 +2,19 @@ import Header from "../components/Headers";
 import Footer2 from "../components/Footer2";
 
 export default function Gallery({ setPhotoCategory }) {
+  globalThis.scrollTo({ top: 0, left: 0 });
   return (
     <div id="generic-bg">
       <Header nested={false} />
       <section class="pt-32" id="main-section">
         <h1
-          class="mb-5 text-6xl text-center text-white font-medium"
+          class="text-6xl text-center text-white font-medium"
           data-aos="zoom-out"
         >
           Galleria
         </h1>
-        <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in" />
+        {/* <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in" /> */}
+        <img src="./src/assets/images/divider3.png" alt="divider pagina" class="mx-auto w-96 mb-10"/>
 
         <div data-aos="fade-in" data-aos-delay="200">
           <GalleryStripe

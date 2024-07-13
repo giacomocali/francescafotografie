@@ -22,7 +22,7 @@ export default function Header({ nested }) {
           href="/"
           className="playwrite flex items-center p-2 text-2xl link-transition2"
         >
-          Francesca Photography
+          Memorie di luce
         </a>
 
         <div className="text-2xl hidden sm:flex sm:items-center sm:space-x-6">
@@ -30,8 +30,7 @@ export default function Header({ nested }) {
             Galleria
           </a>
           <a href="/packs" className="px-4 py-2 link-transition2">
-            {" "}
-            Pacchetti{" "}
+            Pacchetti
           </a>
           <a href="/about" className="px-4 py-2 link-transition2">
             Chi sono

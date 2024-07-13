@@ -94,48 +94,36 @@ export function PacketsCard({ title, color, description, advantages }) {
 }
 
 export function PacketsCard2({ title, color, description }) {
-  var bgClass = "shadow-2xl w-1/4 min-h-96 rounded-3xl text-neutral-800 text-center mx-5 z-0";
+  var bgClass = "shadow-2xl z-0 w-1/4 min-h-96 rounded-3xl text-neutral-800 text-center mx-5 hover:w-1/3";
   switch (color) {
     case "pack1":
-      bgClass = bgClass.concat(" bg-green-300");
+      bgClass = bgClass + " bg-orange-300";
       break;
     case "pack2":
-      bgClass = bgClass.concat(" bg-blue-300");
+      bgClass = bgClass + " bg-blue-300";
       break;
     case "pack3":
-      bgClass = bgClass.concat(" bg-pink-300");
+      bgClass = bgClass + " bg-purple-300";
       break;
   }
 
   return (
-    <div class={bgClass}>
-      
+    <div class={bgClass} data-aos="fade-in" data-aos-delay="200">
       <h2 class="flex justify-between text-4xl text-left ml-5 text-white mt-5 h-1/3">
         {title}
         <img
-          src="./src/assets/images/camera2.png"
-          class="z-10 w-52 h-52 drop-shadow-none"
+          src="./src/assets/images/camera5.png"
+          class="-z-20 scale-150 mr-10 max-w-36 max-h-36"
           alt="icona fotocamera"
-          data-aos="fade-in"
         />
       </h2>
 
-      <div class="bg-white h-full pt-12 px-8 rounded-3xl z-10 shadow-2xl">
-        {description}
-
-        <a
-          class="w-full absolute bottom-0 left-0 rounded-lg py-3 px-5
-          flex justify-center items-center text-xl text-neutral-800 bg-white hover:bg-slate-300 active:bg-slate-400"
-          href="https://wa.me/393883032432"
-          target="_blank"
-        >
-          Per conoscere i prezzi, contattami su Whatsapp
-          <img
-            src="./src/assets/icons/whatsapp-icon-colored.png"
-            alt="whatsapp icon"
-            class="w-10 h-10 mx-3"
-          />
-        </a>
+      <div class="bg-white h-full pt-7 px-8 rounded-3xl text-xl z-50 shadow-2xl">
+        {Array.isArray(description)
+          ? description.map((desc, index) => {
+              {return <p key={index} class="w-full"> {desc} </p>}
+            })
+          : null}
       </div>
     </div>
   );
