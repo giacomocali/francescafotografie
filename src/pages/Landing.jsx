@@ -1,11 +1,11 @@
-import Header from '../components/Headers.jsx'
+import Navbar1 from "../components/Navbars";
 import Footer2 from '../components/Footer2.jsx';
 import { Link } from "../components/Links";
 
 export default function Landing() {
     return (
         <div id='landing-background'>
-            <Header nested={false}/>
+            <Navbar1 nested={false}/>
             <section className='flex items-center justify-center' 
             id='main-section'>
                     <LandingContent header='Francesca Calì' 

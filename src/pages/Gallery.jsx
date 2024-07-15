@@ -1,11 +1,11 @@
-import Header from "../components/Headers";
+import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
 
 export default function Gallery({ setPhotoCategory }) {
   globalThis.scrollTo({ top: 0, left: 0 });
   return (
     <div id="generic-bg">
-      <Header nested={false} />
+      <Navbar1 nested={false} />
       <section class="pt-32" id="main-section">
         <h1
           class="text-6xl text-center text-white font-medium"

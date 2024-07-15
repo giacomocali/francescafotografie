@@ -9,10 +9,11 @@ import { useEffect } from 'preact/hooks';
 
 import Landing from './pages/Landing';
 import Gallery from './pages/Gallery';
-import Aboutme from './pages/Aboutme';
+import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 import Packs from './pages/Packs';
 import { Photos } from './pages/Photos';
+import { NotFound } from './pages/NotFound.jsx';
 
 export function App() {
   AOS.init();
@@ -32,9 +33,10 @@ export function App() {
         <Landing path="/"/>
         <Gallery path="/gallery" setPhotoCategory={setPhotoCategory} />
         <Photos path="/gallery/photos" photoCategory={photoCategory} />
-        <Aboutme path="/about" />
-        <Contact path="/contatti"/> 
         <Packs path="/packs"/>
+        <AboutMe path="/about" />
+        <Contact path="/contatti"/> 
+        <NotFound default/>
       </Router>
   )
 }

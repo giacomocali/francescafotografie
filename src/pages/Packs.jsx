@@ -1,4 +1,4 @@
-import Header from "../components/Headers";
+import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
 import "../main.css";
 
@@ -28,14 +28,27 @@ export default function Packs() {
     title: "Dolci storie a domicilio",
     color: "pack3",
     description:[
-      "Servizio di base per i clienti principali. Lorem ipsum dolor sit amet",
+      "Questo pacchetto prevede 2 ore di scatti",
+      "tra le mura della tua dolce dimora.",
+      "Il mio scopo sarà quello di immortalare",
+      "i momenti più genuini e rappresentativi",
+      "della tua quotidianità per poi valorizzarli",
+      "e romanticizzarli attraverso una galleria di",
+      "immagini che sarà per te un ricordo speciale",
+      "e rappresentativo di chi sei in questo momento",
+      "della tua vita, come individuo, coppia o",
+      "famiglia! Il progetto nasce dall’idea che la",
+      "bellezza è presente soprattutto nelle piccole",
+      "cose, nei momenti spontanei e in quei semplici",
+      "gesti ai quali ci affezioniamo e che vorremmo",
+      "portare per sempre nei nostri ricordi",
     ]
   };
 
   return (
     <>
       <div id="generic-bg" class="pb-96">
-        <Header nested={false} />
+        <Navbar1 nested={false} />
         <section class="pt-32 text-white">
           <h1 class="text-6xl font-medium text-center" data-aos="zoom-out">
             Pacchetti
@@ -53,7 +66,7 @@ export default function Packs() {
             foto in formato digitale entro 7 giorni dalla data dell’evento.
           </p>
 
-          <div class="flex justify-center">
+          <div class="flex justify-center" data-aos="fade-in" data-aos-delay="200">
             <PacketsCard2 {...pack1} />
             <PacketsCard2 {...pack2} />
             <PacketsCard2 {...pack3} />

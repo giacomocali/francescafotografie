@@ -1,10 +1,10 @@
-import Header from "../components/Headers";
+import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
 
-export default function Aboutme() {
+export default function AboutMe() {
   return (
     <div id="generic-bg">
-      <Header nested={false}/>
+      <Navbar1 nested={false}/>
       <section class="pt-20" id="main-section">
         <div class="flex justify-around items-center mx-64 mt-52 text-white">
           <div data-aos="fade-up" data-aos-duration="1000">

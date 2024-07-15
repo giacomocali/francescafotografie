@@ -94,7 +94,8 @@ export function PacketsCard({ title, color, description, advantages }) {
 }
 
 export function PacketsCard2({ title, color, description }) {
-  var bgClass = "shadow-2xl z-0 w-1/4 min-h-96 rounded-3xl text-neutral-800 text-center mx-5 hover:w-1/3";
+  var bgClass =
+    "shadow-2xl z-0 w-1/4 min-h-72 rounded-3xl text-neutral-800 text-center mx-5 pack-card";
   switch (color) {
     case "pack1":
       bgClass = bgClass + " bg-orange-300";
@@ -108,7 +109,7 @@ export function PacketsCard2({ title, color, description }) {
   }
 
   return (
-    <div class={bgClass} data-aos="fade-in" data-aos-delay="200">
+    <div class={bgClass}>
       <h2 class="flex justify-between text-4xl text-left ml-5 text-white mt-5 h-1/3">
         {title}
         <img
@@ -118,12 +119,29 @@ export function PacketsCard2({ title, color, description }) {
         />
       </h2>
 
-      <div class="bg-white h-full pt-7 px-8 rounded-3xl text-xl z-50 shadow-2xl">
+      <div class="relative bg-white h-full text-xl pt-7 px-8 rounded-3xl z-50 shadow-3xl">
         {Array.isArray(description)
           ? description.map((desc, index) => {
-              {return <p key={index} class="w-full"> {desc} </p>}
+              {
+                return (
+                  <p key={index} class="w-full my-2">
+                    {" "}
+                    {desc}{" "}
+                  </p>
+                );
+              }
             })
           : null}
+
+        <div class="absolute bottom-0 left-0 mb-5 ml-8">
+          <a id="wa" class="bg-green-300 rounded-full p-5">
+            <img
+              class="w-16"
+              src="./src/assets/icons/whatsapp-icon-colored.png"
+              alt=""
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

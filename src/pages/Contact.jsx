@@ -1,4 +1,4 @@
-import Header from "../components/Headers";
+import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
 import { useState } from "preact/hooks";
 import emailjs from '@emailjs/browser';
@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 export default function Contact() {
   return (
     <div id="generic-bg">
-      <Header nested={false} />
+      <Navbar1 nested={false} />
       <section class="py-48" id="landing-background">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
 

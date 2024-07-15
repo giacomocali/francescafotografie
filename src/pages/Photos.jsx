@@ -1,4 +1,4 @@
-import Header from "../components/Headers";
+import Navbar1 from "../components/Navbars";
 import {
   battesimoRow123,
   battesimoRow4a,
@@ -44,7 +44,7 @@ export function Photos({ photoCategory }) {
 function galleryBase({ content }) {
   return (
     <>
-      <Header nested={true} />
+      <Navbar1 nested={true} />
       <section id="generic-bg">
         <div id="gallery" class="w-full pt-36">
           {content}

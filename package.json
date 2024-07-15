@@ -15,6 +15,7 @@
     "pnpx": "^0.0.1",
     "preact": "^10.19.6",
     "preact-router": "^4.1.2",
+    "react-modern-drawer": "^1.3.1",
     "spotlight.js": "^0.7.8"
   },
   "devDependencies": {
