@@ -8,13 +8,13 @@ export default function Gallery({ setPhotoCategory }) {
       <Navbar1 nested={false} />
       <section class="pt-32" id="main-section">
         <h1
-          class="text-6xl text-center text-white font-medium"
+          class="text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-center text-white font-medium"
           data-aos="zoom-out"
         >
           Galleria
         </h1>
         {/* <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in" /> */}
-        <img src="./src/assets/images/divider3.png" alt="divider pagina" class="mx-auto w-96 mb-10"/>
+        <img src="./src/assets/images/divider3.png" alt="divider pagina" class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 mb-10"/>
 
         <div data-aos="fade-in" data-aos-delay="200">
           <GalleryStripe
@@ -64,7 +64,7 @@ function GalleryStripe({ text, category, setCategory }) {
 
 function StripeText({ text }) {
   return (
-    <h3 className="text-5xl md:text-7xl lg:text-7xl text-white text-center font-light">
+    <h3 className="text-4xl md:text-7xl lg:text-7xl text-white text-center font-light">
       {text}
     </h3>
   );

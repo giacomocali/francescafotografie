@@ -94,8 +94,13 @@ export function PacketsCard({ title, color, description, advantages }) {
 }
 
 export function PacketsCard2({ title, color, description }) {
+  /* 
+    big: w-1/4 h-98
+    medium: w-1/2 h-52
+    small:w-2/3 h-40
+  */
   var bgClass =
-    "shadow-2xl z-0 w-1/4 min-h-72 rounded-3xl text-neutral-800 text-center mx-5 pack-card";
+    "z-0 w-2/3 h-98 rounded-3xl text-neutral-800 text-center mx-5 transition-all hover:scale-110 hover:shadow-2xl hover:outline outline-4 outline-white";
   switch (color) {
     case "pack1":
       bgClass = bgClass + " bg-orange-300";
@@ -109,40 +114,46 @@ export function PacketsCard2({ title, color, description }) {
   }
 
   return (
-    <div class={bgClass}>
-      <h2 class="flex justify-between text-4xl text-left ml-5 text-white mt-5 h-1/3">
-        {title}
-        <img
-          src="./src/assets/images/camera5.png"
-          class="-z-20 scale-150 mr-10 max-w-36 max-h-36"
-          alt="icona fotocamera"
-        />
-      </h2>
+      <div class={bgClass}>
+        <h2 class="flex justify-between text-4xl text-left ml-5 text-white mt-5 h-1/3">
+          {title}
+          <img
+            src="./src/assets/images/camera5.png"
+            class="-z-20 scale-150 mr-10 max-w-36 max-h-36"
+            alt="icona fotocamera"
+          />
+        </h2>
 
-      <div class="relative bg-white h-full text-xl pt-7 px-8 rounded-3xl z-50 shadow-3xl">
-        {Array.isArray(description)
-          ? description.map((desc, index) => {
-              {
-                return (
-                  <p key={index} class="w-full my-2">
-                    {" "}
-                    {desc}{" "}
-                  </p>
-                );
-              }
-            })
-          : null}
+        <div class="outline outline-white relative bg-white h-full text-xl pt-7 px-8 rounded-3xl z-10 shadow-3xl big-shadow">
+          {Array.isArray(description)
+            ? description.map((desc, index) => {
+                {
+                  return (
+                    <p key={index} class="w-full my-1">
+                      {desc}
+                    </p>
+                  );
+                }
+              })
+            : null}
 
-        <div class="absolute bottom-0 left-0 mb-5 ml-8">
-          <a id="wa" class="bg-green-300 rounded-full p-5">
-            <img
-              class="w-16"
-              src="./src/assets/icons/whatsapp-icon-colored.png"
-              alt=""
-            />
-          </a>
+          <div class="absolute bottom-0 left-0 mb-5 ml-5 flex">
+            <a
+              class="wa-minibanner bg-green-300 rounded-full p-3 flex justify-center items-center"
+              href="https://wa.me/393883032432"
+              target="_blank"
+            >
+              <img
+                class="w-16"
+                src="./src/assets/icons/whatsapp-icon-colored.png"
+                alt="whatsapp"
+              />
+              <p class="hidden">
+                Per conoscere i prezzi, contattami su Whatsapp!
+              </p>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
   );
 }

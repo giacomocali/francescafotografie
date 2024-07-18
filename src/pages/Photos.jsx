@@ -19,6 +19,7 @@ import {
   ritratto3Portrait,
 } from "../photoSources";
 import { Suspense } from "preact/compat";
+import Footer2 from "../components/Footer2";
 
 export function Photos({ photoCategory }) {
   globalThis.scrollTo({ top: 0, left: 0 });
@@ -50,6 +51,7 @@ function galleryBase({ content }) {
           {content}
         </div>
       </section>
+      <Footer2 nested={true} />
     </>
   );
 }
@@ -122,6 +124,7 @@ function battesimoGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
           data-aos-delay="200"
+          data-aos-once="true"
         >
           {battesimoRow123.map((photo) => {
             return gridPhoto({ src: photo });
@@ -135,12 +138,15 @@ function battesimoGallery() {
           <br />
         </div>
 
-        <hr class="mb-10 mt-5 w-2/3 md:w-1/2 lg:w-1/2 mx-auto border-2" />
+        {/* <hr class="mb-10 mt-5 w-2/3 md:w-1/2 lg:w-1/2 mx-auto border-2" /> */}
+        <img class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12" src="../../src/assets/images/divider4.png" alt="divider pagina"/>
+
 
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
           data-aos-delay="200"
+          data-aos-once="true"
         >
           {battesimo2Landscape.map((photo) => {
             return gridPhoto({ src: photo });
@@ -165,6 +171,7 @@ function compleannoGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
           data-aos-delay="200"
+          data-aos-once="true"
         >
           {compleannoLandscape.map((photo) => {
             return gridPhoto({ src: photo });
@@ -172,11 +179,8 @@ function compleannoGallery() {
         </div>
 
         {/* <hr class="my-16 w-2/3 md:w-1/2 lg:w-1/2 mx-auto border-2" /> */}
-        <img
-          src="../../src/assets/images/divider3.png"
-          alt="divider pagina"
-          class="mx-auto w-96 my-10"
-        />
+        <img class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12" src="../../src/assets/images/divider4.png" alt="divider pagina"/>
+        
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
@@ -205,6 +209,7 @@ function laureaGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
           data-aos-delay="200"
+          data-aos-once="true"
         >
           {laureaPhotos.map((photo) => {
             return gridPhoto({ src: photo });
@@ -226,6 +231,7 @@ function ritrattoGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
           data-aos-delay="200"
+          data-aos-once="true"
         >
           {ritratto1Portrait.map((photo) => {
             return gridPhoto({ src: photo });
@@ -236,12 +242,8 @@ function ritrattoGallery() {
           })}
         </div>
 
-        <img
-          src="../../src/assets/images/divider3.png"
-          alt="divider pagina"
-          class="mx-auto w-96 my-10"
-        />
-
+        <img class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12" src="../../src/assets/images/divider4.png" alt="divider pagina"/>
+        
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
@@ -252,12 +254,8 @@ function ritrattoGallery() {
           {gridPhoto({ src: ritratto2Landscape1 })}
           {gridPhoto({ src: ritratto2Landscape2 })}
         </div>
-
-        <img
-          src="../../src/assets/images/divider3.png"
-          alt="divider pagina"
-          class="mx-auto w-96 my-10"
-        />
+        
+        <img class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12" src="../../src/assets/images/divider4.png" alt="divider pagina"/>
 
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
