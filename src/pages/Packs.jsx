@@ -28,8 +28,8 @@ export default function Packs() {
       "di cambiare outfit. La location del servizio",
       "fotografico è a scelta tra l'azienda agricola",
       "Belvedere Colle Mattia e i Pratoni del Vivaro.",
-      "Qualunque location sceglierai dovrai. ",
-      " semplicemente immergerti nella natura e ",
+      "Qualunque location sceglierai dovrai ",
+      "semplicemente immergerti nella natura e ",
       "lasciare che io ti guidi verso la creazione di",
       "immagini romantiche e suggestive. Su richiesta",
       "si può scegliere una location differente. È",
@@ -62,7 +62,7 @@ export default function Packs() {
     <>
       <div id="landing-background" class="pb-96">
         <Navbar1 nested={false} />
-        <section class="pt-32 text-white">
+        <section class="pt-32 text-white pb-20">
           <h1 class="text-6xl font-medium text-center" data-aos="zoom-out" data-aos-once="true">
             Pacchetti
           </h1>
@@ -79,10 +79,10 @@ export default function Packs() {
             foto in formato digitale entro 7 giorni dalla data dell’evento.
           </p>
 
-          <div class="flex justify-center" data-aos="fade-in" data-aos-delay="200" data-aos-once="true">
-            <PacketsCard2 {...pack1} />
-            <PacketsCard2 {...pack2} />
-            <PacketsCard2 {...pack3} />
+          <div class="flex justify-center py-16 overflow-x-auto scroll-snap-x" data-aos="fade-in" data-aos-delay="200" data-aos-once="true">
+            <PacketsCard2 class="scroll-align-start" {...pack1} />
+            <PacketsCard2 class="scroll-align-start" {...pack2} />
+            <PacketsCard2 class="scroll-align-start" {...pack3} />
           </div>
         </section>
         {/* <a
