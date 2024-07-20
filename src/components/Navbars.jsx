@@ -37,16 +37,17 @@ export default function Navbar1({ nested }) {
         className="backdrop-blur-lg fixed z-40 w-full py-7 text-white text-lg"
         id="main-nav"
       >
-        <div className="flex justify-center md:justify-around lg:justify-around xl:justify-around items-center font-light">
+        <div className="flex justify-evenly md:justify-around lg:justify-around xl:justify-around items-center font-light">
+
           <button onClick={toggleDrawer} class="sm:hidden md:hidden lg:hidden xl:hidden">
             <img
               src={drawerSrc}
               alt="immagine"
-              class="w-8 absolute mt-8 ml-6 left-0 top-0 link-transition2 active:brightness-50"
+              class="w-8 shrink link-transition2 active:brightness-50"
             />
           </button>
 
-          <a href="/" className="playwrite text-2xl link-transition2">
+          <a href="/" className="mr-16 playwrite text-2xl link-transition2">
             Memorie di luce
           </a>
 

@@ -102,7 +102,7 @@ body {
   }
 }
 
-#landing-background {
+#landing-bg {
   background-image: url("./assets/images/esterni12.jpg");
 
   background-size: cover;
@@ -190,8 +190,28 @@ body {
 
 .scroll-snap-x{
   scroll-snap-type: x mandatory;
+  scroll-padding: 0 50%;
 }
 
 .scroll-align-start{
-  scroll-snap-align: start;
+  scroll-snap-align: center;
+}
+
+.default-card-bg{
+  @apply bg-white bg-opacity-15 backdrop-blur-md rounded-3xl;
+}
+
+.contact-phone-bg{
+  background-image: url("./assets/images/sitematerial/phone.png");
+  background-size: 85%;
+}
+
+.contact-mail-bg{
+  background-image: url("./assets/images/sitematerial/mail.png");
+  background-size: 85%;
+}
+
+.contact-address-bg{
+  background-image: url("./assets/images/sitematerial/address.png");
+  background-size: 85%;
 }

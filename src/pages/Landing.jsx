@@ -5,7 +5,7 @@ import { Link } from "../components/Links";
 export default function Landing() {
   globalThis.scrollTo({ top: 0, left: 0 });
   return (
-    <div id="landing-background">
+    <div id="landing-bg">
       <Navbar1 nested={false} />
       <section className="flex items-center justify-center" id="main-section">
         <LandingContent header="Francesca Calì" body="Fotografa per eventi" />

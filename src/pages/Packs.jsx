@@ -40,7 +40,7 @@ export default function Packs() {
   const pack3 = {
     title: "Dolci storie a domicilio",
     color: "pack3",
-    description:[
+    description: [
       "Questo pacchetto prevede 2 ore di scatti",
       "tra le mura della tua dolce dimora.",
       "Il mio scopo sarà quello di immortalare",
@@ -55,15 +55,19 @@ export default function Packs() {
       "cose, nei momenti spontanei e in quei semplici",
       "gesti ai quali ci affezioniamo e che vorremmo",
       "portare per sempre nei nostri ricordi.",
-    ]
+    ],
   };
 
   return (
     <>
-      <div id="landing-background" class="pb-96">
+      <div id="landing-bg" class="pb-96">
         <Navbar1 nested={false} />
         <section class="pt-32 text-white pb-20">
-          <h1 class="text-6xl font-medium text-center" data-aos="zoom-out" data-aos-once="true">
+          <h1
+            class="text-6xl font-medium text-center"
+            data-aos="zoom-out"
+            data-aos-once="true"
+          >
             Pacchetti
           </h1>
 
@@ -74,15 +78,26 @@ export default function Packs() {
           />
           {/* <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-7" data-aos="fade-in" /> */}
 
-          <p class="text-xl text-center mb-10">
+          <p class="text-xl text-center mb-0 sm:mb-10 md:mb-10 lg:mb-10 xl:mb-10">
             In tutti i pacchetti è compresa la postproduzione e consegna delle
             foto in formato digitale entro 7 giorni dalla data dell’evento.
           </p>
 
-          <div class="flex justify-center py-16 overflow-x-auto scroll-snap-x" data-aos="fade-in" data-aos-delay="200" data-aos-once="true">
-            <PacketsCard2 class="scroll-align-start" {...pack1} />
-            <PacketsCard2 class="scroll-align-start" {...pack2} />
-            <PacketsCard2 class="scroll-align-start" {...pack3} />
+          <div
+            class="flex justify-center py-16 w-full
+              overflow-x-auto scroll-snap-x
+              sm:overflow-y-hidden 
+              md:overflow-y-hidden
+              lg:overflow-y-hidden
+              xl:overflow-y-hidden
+              "
+            data-aos="fade-in"
+            data-aos-delay="200"
+            data-aos-once="true"
+          >
+            <PacketsCard2  {...pack1} />
+            <PacketsCard2 {...pack2} />
+            <PacketsCard2 {...pack3} />
           </div>
         </section>
         {/* <a
