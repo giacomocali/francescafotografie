@@ -47,8 +47,8 @@ export default function Navbar1({ nested }) {
             />
           </button>
 
-          <a href="/" className="mr-16 playwrite text-2xl link-transition2">
-            Memorie di luce
+          <a href="/" className="mr-16 playwrite font-medium text-2xl link-transition2">
+            Francesca Fotografie
           </a>
 
           <div className="text-2xl hidden sm:flex sm:items-center sm:space-x-6">

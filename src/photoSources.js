@@ -72,6 +72,27 @@ export const compleanno2Portrait = [
   "../../src/assets/images/compleanno/portrait4.jpg",
 ];
 
+export const compleanno3Portrait = [
+  "../../src/assets/images/compleanno/compleanno2-.jpg",
+  "../../src/assets/images/compleanno/compleanno2-3.jpg",
+  "../../src/assets/images/compleanno/compleanno2-4.jpg",
+  "../../src/assets/images/compleanno/compleanno2-5.jpg",
+  "../../src/assets/images/compleanno/compleanno2-8.jpg",
+  "../../src/assets/images/compleanno/compleanno2-9.jpg",
+  "../../src/assets/images/compleanno/compleanno2-10.jpg",
+  "../../src/assets/images/compleanno/compleanno2-11.jpg",
+  "../../src/assets/images/compleanno/compleanno2-12.jpg",
+  "../../src/assets/images/compleanno/compleanno2-13.jpg",
+];
+
+export const compleanno3Landscape = [
+  "../../src/assets/images/compleanno/compleanno2-1.jpg",
+  "../../src/assets/images/compleanno/compleanno2-2.jpg",
+  "../../src/assets/images/compleanno/compleanno2-6.jpg",
+  "../../src/assets/images/compleanno/compleanno2-7.jpg",
+
+];
+
 // LAUREA ========================================
 
 export const laureaPhotos = [

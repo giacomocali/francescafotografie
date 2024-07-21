@@ -2,65 +2,82 @@ import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
 import "../main.css";
 
-import { PacketsCard, PacketsCard2 } from "../components/Cards";
+import { PacketsCard3, PacketsCard2 } from "../components/Cards";
 
 export default function Packs() {
   const pack1 = {
     title: "Reportage",
     color: "pack1",
-    description: [
-      `Base: 3 ore di scatti`,
-      `Plus: 5 ore di scatti`,
-      "Comprende: foto di gruppo, foto individuali del",
-      "festeggiato e scatti durante il corso dell’evento.",
-      "Il tuo compito sarà quello di divertirti insieme",
-      "alle persone a cui vuoi più bene, il mio sarà",
-      "quello di immortalare i momenti più genuini e",
-      "raccontare attraverso le immagini la magia del",
-      "tuo evento!",
-    ],
   };
   const pack2 = {
     title: "Ritratto",
     color: "pack2",
-    description: [
-      "1 ora di scatti all’aperto con possibilità",
-      "di cambiare outfit. La location del servizio",
-      "fotografico è a scelta tra l'azienda agricola",
-      "Belvedere Colle Mattia e i Pratoni del Vivaro.",
-      "Qualunque location sceglierai dovrai ",
-      "semplicemente immergerti nella natura e ",
-      "lasciare che io ti guidi verso la creazione di",
-      "immagini romantiche e suggestive. Su richiesta",
-      "si può scegliere una location differente. È",
-      "possibile fare questo servizio fotografico",
-      "anche insieme al tuo partner o alla tua famiglia!",
-    ],
   };
   const pack3 = {
     title: "Dolci storie a domicilio",
     color: "pack3",
-    description: [
-      "Questo pacchetto prevede 2 ore di scatti",
-      "tra le mura della tua dolce dimora.",
-      "Il mio scopo sarà quello di immortalare",
-      "i momenti più genuini e rappresentativi",
-      "della tua quotidianità per poi valorizzarli",
-      "e romanticizzarli attraverso una galleria di",
-      "immagini che sarà per te un ricordo speciale",
-      "e rappresentativo di chi sei in questo momento",
-      "della tua vita, come individuo, coppia o",
-      "famiglia! Il progetto nasce dall’idea che la",
-      "bellezza è presente soprattutto nelle piccole",
-      "cose, nei momenti spontanei e in quei semplici",
-      "gesti ai quali ci affezioniamo e che vorremmo",
-      "portare per sempre nei nostri ricordi.",
-    ],
   };
+
+  function pack1_text() {
+    return (
+      <div class="mb-5">
+        Base: 3 ore di scatti <br />
+        Plus: 5 ore di scatti <br />
+        <section class="mt-3">
+          Comprende: <strong>foto di gruppo, foto individuali</strong>
+          del festeggiato e <strong>scatti durante il corso dell’evento.</strong> 
+          Il tuo compito sarà quello di 
+          <em> divertirti </em> insieme alle persone a cui vuoi 
+          più bene, il mio sarà quello di immortalare i
+          momenti più genuini e raccontare attraverso
+          le immagini la magia del tuo evento!
+        </section>
+      </div>
+    );
+  }
+
+  function pack2_text() {
+    return (
+      <div class="mb-5">
+        Ritratto: 1 ora di scatti all’aperto 
+        con possibilità di cambiare outfit. 
+        La location del servizio fotografico 
+        è a scelta tra l'azienda agricola 
+        Belvedere Colle Mattia e i Pratoni del Vivaro. 
+        Qualunque location sceglierai dovrai 
+        semplicemente immergerti nella natura e 
+        lasciare che io ti guidi verso la creazione 
+        di immagini romantiche e suggestive. 
+        Su richiesta si può scegliere una location differente. 
+        È possibile fare questo servizio fotografico 
+        anche insieme al tuo partner o alla tua famiglia!
+      </div>
+    );
+  }
+
+  function pack3_text() {
+    return (
+      <div class="mb-5">
+        Questo pacchetto prevede 2 ore di scatti 
+        tra le mura della tua dolce dimora. 
+        Il mio scopo sarà quello di immortalare 
+        i momenti più genuini e rappresentativi 
+        della tua quotidianità per poi valorizzarli 
+        e romanticizzarli attraverso una galleria di 
+        immagini che sarà per te un ricordo speciale e 
+        rappresentativo di chi sei in questo momento della tua vita, 
+        come individuo, coppia o famiglia! 
+        Il progetto nasce dall’idea che la bellezza è presente 
+        soprattutto nelle piccole cose, nei momenti spontanei 
+        e in quei semplici gesti ai quali ci affezioniamo 
+        e che vorremmo portare per sempre nei nostri ricordi
+      </div>
+    );
+  }
 
   return (
     <>
-      <div id="landing-bg" class="pb-96">
+      <div id="landing-bg" class="pb-32">
         <Navbar1 nested={false} />
         <section class="pt-32 text-white pb-20">
           <h1
@@ -95,9 +112,24 @@ export default function Packs() {
             data-aos-delay="200"
             data-aos-once="true"
           >
-            <PacketsCard2  {...pack1} />
-            <PacketsCard2 {...pack2} />
-            <PacketsCard2 {...pack3} />
+            <PacketsCard3
+              title={pack1.title}
+              color={pack1.color}
+              description={pack1_text()}
+            />
+            <PacketsCard3
+              title={pack2.title}
+              color={pack2.color}
+              description={pack2_text()}
+            />
+            <PacketsCard3
+              title={pack3.title}
+              color={pack3.color}
+              description={pack3_text()}
+            />
+
+            {/* <PacketsCard3 {...pack2} />
+            <PacketsCard3 {...pack3} /> */}
           </div>
         </section>
         {/* <a

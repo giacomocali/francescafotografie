@@ -41,37 +41,6 @@ export default function AboutMe() {
           </div>
         </section>
 
-        <section class="pb-80 flex justify-around items-center mx-64">
-          <img
-            src="./src/assets/images/sitematerial/a2.png"
-            alt="foto francesca"
-            class="w-1/3 mr-20"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          />
-
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="200"
-            data-aos-once="true"
-          >
-            <h1 class="text-5xl mb-3"> Significato di "Memorie di luce" </h1>
-            {/* <div class="text-2xl">
-            Memorie di luce significa questo e quest'altro... <br/>
-            Lorem ipsum dolor sit amet consectetur adipiscing <br /> 
-            elit, sed do eiusmod tempor incididunt ut labore et  <br />
-            dolore magna aliqua.
-          </div>
-           */}
-            <div class="text-2xl flex">
-              Memorie di luce significa questo e quest'altro... Lorem ipsum
-              dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </div>
-          </div>
-        </section>
         <Footer2 />
     </main>
   );

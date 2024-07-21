@@ -21,7 +21,6 @@ export function LandingCardTransparent({ header, body }) {
 
 // CONTACT CARD ================================================
 
-
 export function ContactCard({ type }) {
   var content = {};
   switch (type) {
@@ -137,11 +136,6 @@ export function PacketsCard({ title, color, description, advantages }) {
   );
 }
 
-
-
-
-
-
 export function PacketsCard2({ title, color, description }) {
   /* 
     big: w-1/4 h-98
@@ -149,11 +143,11 @@ export function PacketsCard2({ title, color, description }) {
     small:w-2/3 h-40
   */
   var bgClass =
-    "z-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4"
-    + " lg:mb-10 h-fit"
-    + " rounded-3xl text-neutral-800" 
-    + " text-center mx-5 transition-all hover:scale-110" 
-    + " hover:shadow-3xl";
+    "z-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4" +
+    " lg:mb-10 h-fit" +
+    " rounded-3xl text-neutral-800" +
+    " text-center mx-5 transition-all hover:scale-110" +
+    " hover:shadow-3xl";
   switch (color) {
     case "pack1":
       bgClass = bgClass + " bg-orange-300";
@@ -177,9 +171,11 @@ export function PacketsCard2({ title, color, description }) {
         />
       </h2>
 
-      <div class="outline outline-white relative bg-white h-fit 
+      <div
+        class="outline outline-white relative bg-white h-fit 
       text-md   md:text-lg   lg:text-xl
-      pt-6 px-6 rounded-3xl z-10 shadow-3xl big-shadow py-28">
+      pt-6 px-6 rounded-3xl z-10 shadow-3xl big-shadow py-28"
+      >
         {Array.isArray(description)
           ? description.map((desc, index) => {
               {
@@ -213,9 +209,6 @@ export function PacketsCard2({ title, color, description }) {
   );
 }
 
-
-
-
 export function PacketsCard3({ title, color, description }) {
   /* 
     big: w-1/4 h-98
@@ -223,11 +216,10 @@ export function PacketsCard3({ title, color, description }) {
     small:w-2/3 h-40
   */
   var bgClass =
-    "z-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4"
-    + " lg:mb-10 h-fit"
-    + " rounded-3xl text-neutral-800" 
-    + " text-center mx-5 transition-all hover:scale-110" 
-    + " hover:shadow-3xl";
+    "z-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4" +
+    " lg:mb-10 h-fit" +
+    " rounded-3xl text-neutral-800" +
+    " text-center mx-5 transition-all hover:scale-110";
   switch (color) {
     case "pack1":
       bgClass = bgClass + " bg-orange-300";
@@ -251,20 +243,12 @@ export function PacketsCard3({ title, color, description }) {
         />
       </h2>
 
-      <div class="outline outline-white relative bg-white h-fit 
-      text-md   md:text-lg   lg:text-xl
-      pt-6 px-6 rounded-3xl z-10 shadow-3xl big-shadow py-28">
-        {Array.isArray(description)
-          ? description.map((desc, index) => {
-              {
-                return (
-                  <p key={index} class="w-full my-1">
-                    {desc}
-                  </p>
-                );
-              }
-            })
-          : null}
+      <div
+        class="outline outline-white relative bg-white h-fit 
+        text-md   md:text-lg   lg:text-xl
+        pt-6 px-6 rounded-3xl z-10 shadow-3xl big-shadow py-28"
+      >
+        {description}
 
         <div class="absolute bottom-0 left-0 mb-5 ml-5 flex">
           <a
