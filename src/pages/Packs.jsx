@@ -21,11 +21,12 @@ export default function Packs() {
   function pack1_text() {
     return (
       <div class="mb-5">
+        ** TEST ** <br />
         Base: 3 ore di scatti <br />
         Plus: 5 ore di scatti <br />
         <section class="mt-3">
-          Comprende: <strong>foto di gruppo, foto individuali</strong>
-          del festeggiato e <strong>scatti durante il corso dell’evento.</strong> 
+          Comprende: <strong> foto di gruppo, foto individuali </strong>
+          del festeggiato e <strong> scatti durante il corso dell’evento. </strong> 
           Il tuo compito sarà quello di 
           <em> divertirti </em> insieme alle persone a cui vuoi 
           più bene, il mio sarà quello di immortalare i
@@ -39,7 +40,7 @@ export default function Packs() {
   function pack2_text() {
     return (
       <div class="mb-5">
-        Ritratto: 1 ora di scatti all’aperto 
+        1 ora di scatti all’aperto 
         con possibilità di cambiare outfit. 
         La location del servizio fotografico 
         è a scelta tra l'azienda agricola 
@@ -74,6 +75,12 @@ export default function Packs() {
       </div>
     );
   }
+
+
+
+
+  
+
 
   return (
     <>

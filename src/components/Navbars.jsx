@@ -37,13 +37,13 @@ export default function Navbar1({ nested }) {
         className="backdrop-blur-lg fixed z-40 w-full py-7 text-white text-lg"
         id="main-nav"
       >
-        <div className="flex justify-evenly md:justify-around lg:justify-around xl:justify-around items-center font-light">
+        <div className="flex justify-around items-center font-light">
 
           <button onClick={toggleDrawer} class="sm:hidden md:hidden lg:hidden xl:hidden">
             <img
               src={drawerSrc}
               alt="immagine"
-              class="w-8 shrink link-transition2 active:brightness-50"
+              class="w-8 shrink link-transition2 active:brightness-50 transition-all duration-75"
             />
           </button>
 

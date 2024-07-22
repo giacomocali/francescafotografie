@@ -62,7 +62,10 @@ export function ContactCardBase({ content }) {
     <button
       data-clipboard-text={content.text_to_copy}
       id="contact-card"
-      class="copy-btn -z-0 mx-5 active:scale-90 transition-transform duration-75 w-1/2 px-10 sm:px-0 md:px-0 lg:px-0 xl:px-0 default-card-bg"
+      class="copy-btn -z-0 mx-5 
+      active:scale-90 transition-transform duration-75 
+      min-w-64 md:w-64
+      px-10 md:px-0 default-card-bg"
     >
       <div class={specificClass}>
         {/* add the bg image class here */}
@@ -216,8 +219,8 @@ export function PacketsCard3({ title, color, description }) {
     small:w-2/3 h-40
   */
   var bgClass =
-    "z-0 w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4" +
-    " lg:mb-10 h-fit" +
+    "z-0 w-5/6 md:w-1/2 lg:w-1/3 xl:w-1/4" +
+    " lg:mb-10 h-fit pb" +
     " rounded-3xl text-neutral-800" +
     " text-center mx-5 transition-all hover:scale-110";
   switch (color) {
@@ -246,7 +249,7 @@ export function PacketsCard3({ title, color, description }) {
       <div
         class="outline outline-white relative bg-white h-fit 
         text-md   md:text-lg   lg:text-xl
-        pt-6 px-6 rounded-3xl z-10 shadow-3xl big-shadow py-28"
+        mt-5 pt-6 px-6 rounded-3xl z-10 shadow-3xl big-shadow pb-28"
       >
         {description}
 
