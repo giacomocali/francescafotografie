@@ -12,9 +12,9 @@ export default function Navbar1({ nested }) {
     setIsOpen((prevState) => !prevState);
   };
 
-  if(isOpen){
+  if (isOpen) {
     // anime({
-    //   targets: ".drawer-link", 
+    //   targets: ".drawer-link",
     //   opacity: 100,
     //   duration: 1000,
     //   delay: anime.stagger(100, {start:500}, {easing: "easeOutExpo"}),
@@ -38,8 +38,10 @@ export default function Navbar1({ nested }) {
         id="main-nav"
       >
         <div className="flex justify-around items-center font-light">
-
-          <button onClick={toggleDrawer} class="sm:hidden md:hidden lg:hidden xl:hidden">
+          <button
+            onClick={toggleDrawer}
+            class="sm:hidden md:hidden lg:hidden xl:hidden"
+          >
             <img
               src={drawerSrc}
               alt="immagine"
@@ -47,7 +49,10 @@ export default function Navbar1({ nested }) {
             />
           </button>
 
-          <a href="/" className="mr-16 playwrite font-medium text-2xl link-transition2">
+          <a
+            href="/"
+            className="mr-16 playwrite font-medium text-2xl link-transition2"
+          >
             Francesca Fotografie
           </a>
 
@@ -65,7 +70,7 @@ export default function Navbar1({ nested }) {
               Contatti
             </a>
             <a
-              href="https://www.instagram.com/francescacali.ph/"
+              href="https://www.instagram.com/francesca_fotografie/"
               target="_blank"
             >
               <img
@@ -85,9 +90,6 @@ export default function Navbar1({ nested }) {
         </div>
       </nav>
 
-
-
-
       <Drawer
         open={isOpen}
         onClose={toggleDrawer}
@@ -103,7 +105,7 @@ export default function Navbar1({ nested }) {
               alt="close button"
             />
           </button>
-          
+
           <ul class="mt-10 ml-5 text-3xl">
             <li class="drawer-link my-2 link-transition2">
               <a href="/"> Home </a>
@@ -125,11 +127,27 @@ export default function Navbar1({ nested }) {
               <a href="/contatti"> Contatti </a>
             </li>
           </ul>
-          
+
           {/* LINK SOCIAL */}
-          <ul class="flex mt-10"> 
-            <li> <img class="w-14 mx-5" src="./src/assets/icons/instagram-icon.png" alt="instagram icon" /> </li>
-            <li> <img class="w-14" src="./src/assets/icons/whatsapp-icon.png" alt="instagram icon" /> </li>
+          <ul class="flex mt-10">
+            <li>
+              <a href="https://www.instagram.com/francesca_fotografie/">
+                <img
+                  class="w-14 mx-5"
+                  src="./src/assets/icons/instagram-icon.png"
+                  alt="instagram icon"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/393883032432">
+                <img
+                  class="w-14"
+                  src="./src/assets/icons/whatsapp-icon.png"
+                  alt="whatsapp icon"
+                />
+              </a>
+            </li>
           </ul>
         </div>
       </Drawer>

@@ -219,7 +219,7 @@ export function PacketsCard3({ title, color, description }) {
     small:w-2/3 h-40
   */
   var bgClass =
-    "z-0 w-5/6 md:w-1/2 lg:w-1/3 xl:w-1/4" +
+    " z-0 w-5/6 md:w-1/2 lg:w-1/3 xl:w-1/4" +
     " lg:mb-10 h-fit pb" +
     " rounded-3xl text-neutral-800" +
     " text-center mx-5 transition-all hover:scale-110";
@@ -264,7 +264,7 @@ export function PacketsCard3({ title, color, description }) {
               src="./src/assets/icons/whatsapp-icon-colored.png"
               alt="whatsapp"
             />
-            <p class="hidden">
+            <p class="block xl:hidden">
               Per conoscere i prezzi, contattami su Whatsapp!
             </p>
           </a>

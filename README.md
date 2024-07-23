@@ -1,8 +1,9 @@
-# Francesca Photography
-[francescaphotography.site](francescaphotography.site) - portfolio dei lavori di fotografia di Francesca Calì.
+# Francesca Fotografie
+(Link in arrivo)
+Sito portfolio per i lavori di fotografia di Francesca Calì.
 
 ## Tecnologie utilizzate
-- pnpm (invece di npm)
+- pnpm (anziché npm)
 - Vite
 - Preact
 - Tailwind CSS

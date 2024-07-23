@@ -26,12 +26,12 @@ export default function Packs() {
         Plus: 5 ore di scatti <br />
         <section class="mt-3">
           Comprende: <strong> foto di gruppo, foto individuali </strong>
-          del festeggiato e <strong> scatti durante il corso dell’evento. </strong> 
-          Il tuo compito sarà quello di 
-          <em> divertirti </em> insieme alle persone a cui vuoi 
-          più bene, il mio sarà quello di immortalare i
-          momenti più genuini e raccontare attraverso
-          le immagini la magia del tuo evento!
+          del festeggiato e{" "}
+          <strong> scatti durante il corso dell’evento. </strong>
+          Il tuo compito sarà quello di
+          <em> divertirti </em> insieme alle persone a cui vuoi più bene, il mio
+          sarà quello di immortalare i momenti più genuini e raccontare
+          attraverso le immagini la magia del tuo evento!
         </section>
       </div>
     );
@@ -40,18 +40,14 @@ export default function Packs() {
   function pack2_text() {
     return (
       <div class="mb-5">
-        1 ora di scatti all’aperto 
-        con possibilità di cambiare outfit. 
-        La location del servizio fotografico 
-        è a scelta tra l'azienda agricola 
-        Belvedere Colle Mattia e i Pratoni del Vivaro. 
-        Qualunque location sceglierai dovrai 
-        semplicemente immergerti nella natura e 
-        lasciare che io ti guidi verso la creazione 
-        di immagini romantiche e suggestive. 
-        Su richiesta si può scegliere una location differente. 
-        È possibile fare questo servizio fotografico 
-        anche insieme al tuo partner o alla tua famiglia!
+        1 ora di scatti all’aperto con possibilità di cambiare outfit. La
+        location del servizio fotografico è a scelta tra l'azienda agricola
+        Belvedere Colle Mattia e i Pratoni del Vivaro. Qualunque location
+        sceglierai dovrai semplicemente immergerti nella natura e lasciare che
+        io ti guidi verso la creazione di immagini romantiche e suggestive. Su
+        richiesta si può scegliere una location differente. È possibile fare
+        questo servizio fotografico anche insieme al tuo partner o alla tua
+        famiglia!
       </div>
     );
   }
@@ -59,28 +55,18 @@ export default function Packs() {
   function pack3_text() {
     return (
       <div class="mb-5">
-        Questo pacchetto prevede 2 ore di scatti 
-        tra le mura della tua dolce dimora. 
-        Il mio scopo sarà quello di immortalare 
-        i momenti più genuini e rappresentativi 
-        della tua quotidianità per poi valorizzarli 
-        e romanticizzarli attraverso una galleria di 
-        immagini che sarà per te un ricordo speciale e 
-        rappresentativo di chi sei in questo momento della tua vita, 
-        come individuo, coppia o famiglia! 
-        Il progetto nasce dall’idea che la bellezza è presente 
-        soprattutto nelle piccole cose, nei momenti spontanei 
-        e in quei semplici gesti ai quali ci affezioniamo 
-        e che vorremmo portare per sempre nei nostri ricordi
+        Questo pacchetto prevede 2 ore di scatti tra le mura della tua dolce
+        dimora. Il mio scopo sarà quello di immortalare i momenti più genuini e
+        rappresentativi della tua quotidianità per poi valorizzarli e
+        romanticizzarli attraverso una galleria di immagini che sarà per te un
+        ricordo speciale e rappresentativo di chi sei in questo momento della
+        tua vita, come individuo, coppia o famiglia! Il progetto nasce dall’idea
+        che la bellezza è presente soprattutto nelle piccole cose, nei momenti
+        spontanei e in quei semplici gesti ai quali ci affezioniamo e che
+        vorremmo portare per sempre nei nostri ricordi
       </div>
     );
   }
-
-
-
-
-  
-
 
   return (
     <>
@@ -108,13 +94,8 @@ export default function Packs() {
           </p>
 
           <div
-            class="flex justify-center py-16 w-full
-              overflow-x-auto scroll-snap-x
-              sm:overflow-y-hidden 
-              md:overflow-y-hidden
-              lg:overflow-y-hidden
-              xl:overflow-y-hidden
-              "
+            id="pack-container"
+            class="w-full flex xl:justify-center py-10 overflow-x-auto overflow-y-hidden"
             data-aos="fade-in"
             data-aos-delay="200"
             data-aos-once="true"
@@ -134,9 +115,6 @@ export default function Packs() {
               color={pack3.color}
               description={pack3_text()}
             />
-
-            {/* <PacketsCard3 {...pack2} />
-            <PacketsCard3 {...pack3} /> */}
           </div>
         </section>
         {/* <a

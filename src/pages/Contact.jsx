@@ -28,7 +28,8 @@ export default function Contact() {
   return (
     <main id="landing-bg" class="h-screen">
       <Navbar1 nested={false} />
-      <section class="py-52">
+
+      <section class="pt-40" id="main-section">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           <div class="py-10">
             <h2
@@ -39,7 +40,7 @@ export default function Contact() {
             </h2>
             <hr class="h-0.5 bg-white w-80 mx-auto" />
             <div
-              class="my-10 flex justify-around overflow-x-auto scroll-snap-x"
+              class="py-10 flex xl:justify-around overflow-x-auto scroll-snap-x"
               data-aos="fade-in"
               data-aos-delay="200"
             >
@@ -91,8 +92,10 @@ export default function Contact() {
               </form> */}
             </div>
           </div>
-        </div>
+        </div> 
       </section>
+
+
       <Footer2 />
     </main>
   );

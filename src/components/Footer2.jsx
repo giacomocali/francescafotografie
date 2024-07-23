@@ -24,7 +24,7 @@ export default function Footer2({nested}) {
             <img
               src={instagramSrc}
               alt="logo instagram"
-              class="w-10 md:w-8 lg:w-8 link-transition2"
+              class="w-20 sm:w-8 link-transition2"
             />
           </a>
           <a
@@ -35,7 +35,7 @@ export default function Footer2({nested}) {
             <img
               src={whatsappSrc}
               alt="logo whatsapp"
-              class="w-10 md:w-8 lg:w-8 link-transition2"
+              class="w-20 sm:w-8 link-transition2"
             />
           </a>
         </div>
