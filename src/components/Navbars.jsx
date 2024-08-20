@@ -21,20 +21,20 @@ export default function Navbar1({ nested }) {
     // });
   }
 
-  var instagramSrc = "./src/assets/icons/instagram-icon.png";
-  var whatsappSrc = "./src/assets/icons/whatsapp-icon.png";
+  var instagramSrc = "./src/assets/icons/instagram-icon-colored.png";
+  var whatsappSrc = "./src/assets/icons/whatsapp-icon-colored.png";
   var drawerSrc = "./src/assets/icons/hamburger-menu.png";
 
   if (nested) {
-    instagramSrc = "../../src/assets/icons/instagram-icon.png";
-    whatsappSrc = "../../src/assets/icons/whatsapp-icon.png";
+    instagramSrc = "../../src/assets/icons/instagram-icon-colored.png";
+    whatsappSrc = "../../src/assets/icons/whatsapp-icon-colored.png";
     drawerSrc = "../../src/assets/icons/hamburger-menu.png";
   }
 
   return (
     <>
       <nav
-        className="backdrop-blur-lg fixed z-40 w-full py-7 text-white text-lg"
+        className="backdrop-blur-lg fixed z-40 w-full py-7 text-lg"
         id="main-nav"
       >
         <div className="flex justify-around items-center font-light">
@@ -76,14 +76,14 @@ export default function Navbar1({ nested }) {
               <img
                 src={instagramSrc}
                 alt="logo instagram"
-                class="w-10 md:w-8 lg:w-6 xl:w-6 link-transition2"
+                class="w-12 md:w-10 link-transition2 rounded-full"
               />
             </a>
             <a href="https://wa.me/393883032432" target="_blank">
               <img
                 src={whatsappSrc}
                 alt="logo whatsapp"
-                class="w-10 md:w-8 lg:w-6 xl:w-6 link-transition2"
+                class="w-12 md:w-10 link-transition2 rounded-full"
               />
             </a>
           </div>
@@ -97,7 +97,7 @@ export default function Navbar1({ nested }) {
         direction="left"
         lockBackgroundScroll={true}
       >
-        <div class="bg-neutral-800 p-10 w-full h-full">
+        <div class="bg-neutral-900 text-white p-10 w-full h-full">
           <button onClick={toggleDrawer}>
             <img
               class="w-14 active:brightness-50 link-transition2"

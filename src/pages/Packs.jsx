@@ -21,9 +21,8 @@ export default function Packs() {
   function pack1_text() {
     return (
       <div class="mb-5">
-        ** TEST ** <br />
-        Base: 3 ore di scatti <br />
-        Plus: 5 ore di scatti <br />
+        Base: <strong>3 ore di scatti</strong> <br />
+        Plus:  <strong>5 ore di scatti</strong> <br />
         <section class="mt-3">
           Comprende: <strong> foto di gruppo, foto individuali </strong>
           del festeggiato e{" "}
@@ -40,11 +39,11 @@ export default function Packs() {
   function pack2_text() {
     return (
       <div class="mb-5">
-        1 ora di scatti all’aperto con possibilità di cambiare outfit. La
+        <strong>1 ora di scatti all’aperto</strong> con possibilità di cambiare outfit. La
         location del servizio fotografico è a scelta tra l'azienda agricola
-        Belvedere Colle Mattia e i Pratoni del Vivaro. Qualunque location
+        <strong> Belvedere Colle Mattia </strong> e i <strong> Pratoni del Vivaro.</strong> Qualunque location
         sceglierai dovrai semplicemente immergerti nella natura e lasciare che
-        io ti guidi verso la creazione di immagini romantiche e suggestive. Su
+        io ti guidi verso la creazione di <strong>immagini romantiche e suggestive</strong>. Su
         richiesta si può scegliere una location differente. È possibile fare
         questo servizio fotografico anche insieme al tuo partner o alla tua
         famiglia!
@@ -55,13 +54,13 @@ export default function Packs() {
   function pack3_text() {
     return (
       <div class="mb-5">
-        Questo pacchetto prevede 2 ore di scatti tra le mura della tua dolce
-        dimora. Il mio scopo sarà quello di immortalare i momenti più genuini e
+        Questo pacchetto prevede <strong>2 ore di scatti tra le mura della tua dolce
+        dimora.</strong> Il mio scopo sarà quello di immortalare i momenti più genuini e
         rappresentativi della tua quotidianità per poi valorizzarli e
         romanticizzarli attraverso una galleria di immagini che sarà per te un
-        ricordo speciale e rappresentativo di chi sei in questo momento della
-        tua vita, come individuo, coppia o famiglia! Il progetto nasce dall’idea
-        che la bellezza è presente soprattutto nelle piccole cose, nei momenti
+        <strong> ricordo speciale e rappresentativo di chi sei in questo momento della
+        tua vita</strong>, come individuo, coppia o famiglia! Il progetto nasce dall’idea
+        che la <em>bellezza è presente soprattutto nelle piccole cose</em>, nei momenti
         spontanei e in quei semplici gesti ai quali ci affezioniamo e che
         vorremmo portare per sempre nei nostri ricordi
       </div>
@@ -70,11 +69,11 @@ export default function Packs() {
 
   return (
     <>
-      <div id="landing-bg" class="pb-32">
+      <main id="bg2" class="pb-32 text-black">
         <Navbar1 nested={false} />
-        <section class="pt-32 text-white pb-20">
+        <section class="pt-32 pb-20">
           <h1
-            class="text-6xl font-medium text-center"
+            class="text-7xl font-medium text-center"
             data-aos="zoom-out"
             data-aos-once="true"
           >
@@ -82,7 +81,7 @@ export default function Packs() {
           </h1>
 
           <img
-            src="./src/assets/images/divider3.png"
+            src="./src/assets/images/divider3-black.png"
             alt="divider pagina"
             class="mx-auto w-96 mb-6"
           />
@@ -131,7 +130,7 @@ export default function Packs() {
           class="w-10 h-10 mx-3"
           />
         </a> */}
-      </div>
+      </main>
       <Footer2 />
     </>
   );

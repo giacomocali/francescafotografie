@@ -40,8 +40,13 @@ body {
 }
 
 ::selection {
-  background: rgba(235, 223, 116, 0.9);
+  background: rgba(210, 210, 116, 0.7);
 }
+
+/*
+::selection{
+    background: rgba(255, 255, 255, 1);
+}*/
 
 #main-nav {
   mask-image: linear-gradient(
@@ -55,15 +60,12 @@ body {
 }
 
 .standard-btn {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(0, 0, 0, 0);
-
   transition: color 0.12s ease-in-out;
   transition: background-color 0.12s ease-in-out;
 
   &:hover {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
   }
 }
 
@@ -91,7 +93,6 @@ body {
 } */
 
 .link-transition2 {
-  color: white;
   filter: none;
   transition: color 0.15s ease-in-out;
   transition: filter 0.15s ease-in-out;
@@ -102,9 +103,29 @@ body {
   }
 }
 
-#landing-bg {
-  background-image: url("./assets/images/esterni12.jpg");
+#bg0 {
+  background-image: url("./assets/images/sfondi/0.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+#bg1 {
+  background-image: url("./assets/images/sfondi/1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bg2 {
+  background-image: url("./assets/images/sfondi/2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bg3 {
+  background-image: url("./assets/images/sfondi/3.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -198,20 +219,20 @@ body {
 }
 
 .default-card-bg {
-  @apply bg-white bg-opacity-15 backdrop-blur-md rounded-3xl;
+  @apply bg-black bg-opacity-15 backdrop-blur-md rounded-3xl;
 }
 
-.contact-phone-bg {
-  background-image: url("./assets/images/sitematerial/phone.png");
+.contact-mail {
+  background-image: url("./assets/icons/mail-black.png");
+  background-size: 95%;
+}
+
+.contact-whatsapp {
+  background-image: url("./assets/icons/whatsapp-icon-black.png");
   background-size: 85%;
 }
 
-.contact-mail-bg {
-  background-image: url("./assets/images/sitematerial/mail.png");
-  background-size: 85%;
-}
-
-.contact-address-bg {
-  background-image: url("./assets/images/sitematerial/address.png");
+.contact-instagram {
+  background-image: url("./assets/icons/instagram-icon-black.png");
   background-size: 85%;
 }

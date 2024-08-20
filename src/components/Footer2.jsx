@@ -1,9 +1,9 @@
 import "../main.css";
-export default function Footer2({nested}) {
-  var whatsappSrc ="./src/assets/icons/whatsapp-icon.png";
+export default function Footer2({ nested }) {
+  var whatsappSrc = "./src/assets/icons/whatsapp-icon.png";
   var instagramSrc = "./src/assets/icons/instagram-icon.png";
 
-  if(nested){
+  if (nested) {
     whatsappSrc = "../../src/assets/icons/whatsapp-icon.png";
     instagramSrc = "../../src/assets/icons/instagram-icon.png";
   }
@@ -13,11 +13,11 @@ export default function Footer2({nested}) {
       <div class="text-md md:text-xl lg:text-xl xl:text-xl flex justify-around items-center px-10 pt-10">
         <div>
           <p>Francesca Calì</p>
-          Nome viale, nome città, sigla +00 000 000 0000
+          <p>Roma (RM) // +39 388 303 2432 </p>
         </div>
         <div class="flex">
           <a
-            href="https://www.instagram.com/francescacali.ph/"
+            href="https://www.instagram.com/francesca_fotografie/"
             target="_blank"
             className="px-4 py-2"
           >
@@ -42,7 +42,11 @@ export default function Footer2({nested}) {
       </div>
 
       <div class="text-center py-5">
-        <a href="https://www.instagram.com/giacomodev_com" target="_blank" class="text-neutral-300 hover:text-neutral-500 active:text-blue-700">
+        <a
+          href="https://www.instagram.com/giacomodev_com"
+          target="_blank"
+          class="text-neutral-300 hover:text-neutral-500 active:text-blue-700"
+        >
           Made with 💙 by Giacomo Calì
         </a>
       </div>

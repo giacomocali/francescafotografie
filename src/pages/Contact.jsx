@@ -1,6 +1,6 @@
 import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
-import { ContactCard } from "../components/Cards";
+import { ContactCard, ContactButton } from "../components/Cards";
 
 import ClipboardJS from "clipboard";
 
@@ -22,11 +22,11 @@ export default function Contact() {
     }, 1000);
   });
   clipboard.on("error", function (e) {
-    console.log("errore");
+    console.error("errore");
   });
 
   return (
-    <main id="landing-bg" class="h-screen">
+    <main id="bg1" class="h-screen text-black">
       <Navbar1 nested={false} />
 
       <section class="pt-40" id="main-section">
@@ -38,15 +38,15 @@ export default function Contact() {
             >
               Contattami
             </h2>
-            <hr class="h-0.5 bg-white w-80 mx-auto" />
+            <hr class="h-0.5 bg-black w-80 mx-auto" />
             <div
               class="py-10 flex xl:justify-around overflow-x-auto scroll-snap-x"
               data-aos="fade-in"
               data-aos-delay="200"
             >
-              <ContactCard type={"phone"} />
               <ContactCard type={"email"} />
-              <ContactCard type={"address"} />
+              <ContactButton type={"whatsapp"} />
+              <ContactButton type={"instagram"} />
             </div>
           </div>
 

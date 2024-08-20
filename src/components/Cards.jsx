@@ -24,32 +24,32 @@ export function LandingCardTransparent({ header, body }) {
 export function ContactCard({ type }) {
   var content = {};
   switch (type) {
-    case "phone":
-      content = {
-        title: "Telefono",
-        text_to_copy: "+39 333 333 3333",
-        cls: "contact-phone-bg",
-      };
-      break;
     case "email":
       content = {
         title: "Email",
-        text_to_copy: "lTqFP@example.com",
-        cls: "contact-mail-bg",
+        text_to_copy: "califrancescaph@gmail.com",
+        cls: "contact-mail",
       };
       break;
-    case "address":
+    case "whatsapp":
       content = {
-        title: "Indirizzo",
-        text_to_copy: "Via Roma, 123",
-        cls: "contact-address-bg",
+        title: "WhatsApp",
+        text_to_copy: "https://wa.me/393883032432",
+        cls: "contact-whatsapp",
+      };
+      break;
+    case "instagram":
+      content = {
+        title: "Instagram",
+        text_to_copy: "https://www.instagram.com/francesca_fotografie/",
+        cls: "contact-instagram",
       };
       break;
     default:
       content = {
-        title: "Indirizzo",
-        text_to_copy: "Via Roma, 123",
-        cls: "contact-address-bg",
+        title: "error",
+        text_to_copy: "",
+        cls: "",
       };
       break;
   }
@@ -58,6 +58,7 @@ export function ContactCard({ type }) {
 
 export function ContactCardBase({ content }) {
   var specificClass = "py-24 bg-cover bg-no-repeat bg-center " + content.cls;
+  console.log(specificClass);
   return (
     <button
       data-clipboard-text={content.text_to_copy}
@@ -69,12 +70,47 @@ export function ContactCardBase({ content }) {
     >
       <div class={specificClass}>
         {/* add the bg image class here */}
-        <h3 className="text-center text-5xl text-white z-10 p-2">
-          {content.title}
-        </h3>
+        <h3 className="text-center text-5xl z-10 p-2">{content.title}</h3>
         <small class="italic text-center text-lg"> Clicca per copiare </small>
       </div>
     </button>
+  );
+}
+
+export function ContactButton({ type }) {
+  var href, title = "";
+  var cls = "py-24 bg-cover bg-no-repeat bg-center ";
+  switch (type) {
+    case "whatsapp":
+      title="WhatsApp"
+      href = "https://wa.me/393883032432";
+      cls = cls+"contact-whatsapp";
+      break;
+    case "instagram":
+      title="Instagram"
+      href = "https://www.instagram.com/francesca_fotografie/";
+      cls = cls+"contact-instagram";
+      break;
+    default:
+      break;
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      id="contact-card"
+      class="copy-btn -z-0 mx-5 active:scale-90
+      transition-transform duration-75 min-w-64 md:w-64 px-10 md:px-0
+      default-card-bg"
+    >
+      <div class={cls}>
+        {/* add the bg image class here */}
+        <h3 className="text-center text-5xl z-10 p-2">{title}</h3>
+        <p class="italic text-center text-lg"> Collegamento ➚ </p>
+      </div>
+    </a>
   );
 }
 

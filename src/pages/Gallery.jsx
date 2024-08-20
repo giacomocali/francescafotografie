@@ -3,18 +3,24 @@ import Footer2 from "../components/Footer2";
 
 export default function Gallery({ setPhotoCategory }) {
   globalThis.scrollTo({ top: 0, left: 0 });
+
+
   return (
-    <div id="generic-bg">
+    <main id="bg2" class="text-black ">
       <Navbar1 nested={false} />
-      <section class="pt-32" id="main-section">
+      <section class="pt-32 w-full h-full">
         <h1
-          class="text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-center text-white font-medium"
+          class="text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-center font-medium"
           data-aos="zoom-out"
         >
           Galleria
         </h1>
         {/* <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in" /> */}
-        <img src="./src/assets/images/divider3.png" alt="divider pagina" class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 mb-10"/>
+        <img
+          src="./src/assets/images/divider3-black.png"
+          alt="divider pagina"
+          class="mx-auto w-72 md:w-96 mb-10"
+        />
 
         <div data-aos="fade-in" data-aos-delay="200">
           <GalleryStripe
@@ -40,7 +46,7 @@ export default function Gallery({ setPhotoCategory }) {
           <Footer2 />
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 
