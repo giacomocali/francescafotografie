@@ -1,12 +1,8 @@
 import "../main.css";
-export default function Footer2({ nested }) {
-  var whatsappSrc = "./src/assets/icons/whatsapp-icon.png";
-  var instagramSrc = "./src/assets/icons/instagram-icon.png";
+export default function Footer2() {
+  var whatsappSrc = "/icons/whatsapp-icon.png";
+  var instagramSrc = "/icons/instagram-icon.png";
 
-  if (nested) {
-    whatsappSrc = "../../src/assets/icons/whatsapp-icon.png";
-    instagramSrc = "../../src/assets/icons/instagram-icon.png";
-  }
 
   return (
     <footer class="bg-neutral-800 text-white z-50">
@@ -43,7 +39,7 @@ export default function Footer2({ nested }) {
 
       <div class="text-center py-5">
         <a
-          href="https://www.instagram.com/giacomodev_com"
+          href="www.giacomodev.com"
           target="_blank"
           class="text-neutral-300 hover:text-neutral-500 active:text-blue-700"
         >

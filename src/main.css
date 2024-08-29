@@ -4,20 +4,11 @@
 
 @font-face {
   font-family: urbanist;
-  src: url(./assets/fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
-}
-@font-face {
-  font-family: indie;
-  src: url(./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf);
+  src: url(/fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: playwrite;
-  src: url(./assets/fonts/Playwrite_FR_Moderne/PlaywriteFRModerne-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: comforta;
-  src: url(./assets/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+  src: url(/fonts/Playwrite_FR_Moderne/PlaywriteFRModerne-VariableFont_wght.ttf);
 }
 
 body {
@@ -25,28 +16,20 @@ body {
   color: white;
 }
 
-.comforta {
-  font-family: comforta;
-}
 
 .playwrite {
   font-family: playwrite;
-}
-.indie {
-  font-family: indie;
 }
 .urbanist {
   font-family: urbanist;
 }
 
 ::selection {
-  background: rgba(210, 210, 116, 0.7);
+  background: rgba(245, 220, 110, 1);
+  /* background: rgba(250, 180, 170, 0.7); */
 }
 
-/*
-::selection{
-    background: rgba(255, 255, 255, 1);
-}*/
+/* selection:bg-pink-400 selection:bg-opacity-70 */
 
 #main-nav {
   mask-image: linear-gradient(
@@ -103,32 +86,21 @@ body {
   }
 }
 
-#bg0 {
-  background-image: url("./assets/images/sfondi/0.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.bg0 {
+  background-image: url("/images/sfondi/0.jpeg");
+}
+.bg1 {
+  background-image: url("/images/sfondi/1.jpeg");
+}
+.bg2 {
+  background-image: url("/images/sfondi/2.jpeg");
+}
+.bg3 {
+  background-image: url("/images/sfondi/3.jpeg");
 }
 
-#bg1 {
-  background-image: url("./assets/images/sfondi/1.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#bg2 {
-  background-image: url("./assets/images/sfondi/2.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#bg3 {
-  background-image: url("./assets/images/sfondi/3.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.bg-properties{
+  @apply md:bg-cover md:bg-no-repeat md:bg-center;
 }
 
 #landing-card-container {
@@ -170,28 +142,28 @@ body {
 }
 
 #stripe-battesimo {
-  background-image: url("./assets/images/battesimo/bg.jpg");
+  background-image: url("/images/battesimo/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #stripe-compleanno {
-  background-image: url("./assets/images/compleanno/landscape7.jpg");
+  background-image: url("/images/compleanno/landscape7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #stripe-laurea {
-  background-image: url("./assets/images/laurea/bg2.jpg");
+  background-image: url("/images/laurea/bg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #stripe-ritratto {
-  background-image: url("./assets/images/ritratto/bg.jpg");
+  background-image: url("/images/ritratto/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -223,16 +195,16 @@ body {
 }
 
 .contact-mail {
-  background-image: url("./assets/icons/mail-black.png");
+  background-image: url("/icons/mail-black.png");
   background-size: 95%;
 }
 
 .contact-whatsapp {
-  background-image: url("./assets/icons/whatsapp-icon-black.png");
+  background-image: url("/icons/whatsapp-icon-black.png");
   background-size: 85%;
 }
 
 .contact-instagram {
-  background-image: url("./assets/icons/instagram-icon-black.png");
+  background-image: url("/icons/instagram-icon-black.png");
   background-size: 85%;
 }

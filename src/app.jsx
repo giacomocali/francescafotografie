@@ -1,8 +1,8 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './main.css'
+import spotlight from 'spotlight.js';
 
-import anime from "../node_modules/animejs/lib/anime.es.js";
 import { Router } from 'preact-router';
 import { useState } from 'preact/hooks';
 import { useEffect } from 'preact/hooks';

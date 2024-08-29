@@ -2,7 +2,7 @@ import Navbar1 from "../components/Navbars";
 import Footer2 from "../components/Footer2";
 import "../main.css";
 
-import { PacketsCard3, PacketsCard2 } from "../components/Cards";
+import { PacketsCard3 } from "../components/Cards";
 
 export default function Packs() {
   const pack1 = {
@@ -69,7 +69,7 @@ export default function Packs() {
 
   return (
     <>
-      <main id="bg2" class="pb-32 text-black">
+      <main class="bg2 bg-properties pb-32 text-black">
         <Navbar1 nested={false} />
         <section class="pt-32 pb-20">
           <h1
@@ -81,7 +81,7 @@ export default function Packs() {
           </h1>
 
           <img
-            src="./src/assets/images/divider3-black.png"
+            src="/images/divider3-black.png"
             alt="divider pagina"
             class="mx-auto w-96 mb-6"
           />

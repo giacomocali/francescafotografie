@@ -1,11 +1,13 @@
 # Francesca Fotografie
-(Link in arrivo)
+[francescafotografie.com](francescafotografie.com)
 Sito portfolio per i lavori di fotografia di Francesca Calì.
 
 ## Tecnologie utilizzate
 - pnpm (anziché npm)
 - Vite
-- Preact
+- Preact e Preact Router
+- React Modern Drawer
 - Tailwind CSS
-- AOS (Animate On Scroll)
+- Cliipboard.js
 - Spotlight.js
+- AOS (Animate On Scroll)

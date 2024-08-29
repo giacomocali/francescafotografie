@@ -7,6 +7,8 @@ import ClipboardJS from "clipboard";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  globalThis.scrollTo({ top: 0, left: 0 });
+
   var clipboard = new ClipboardJS(".copy-btn");
 
   clipboard.on("success", function (e) {
@@ -26,7 +28,7 @@ export default function Contact() {
   });
 
   return (
-    <main id="bg1" class="h-screen text-black">
+    <main class="bg1 bg-properties h-screen text-black">
       <Navbar1 nested={false} />
 
       <section class="pt-40" id="main-section">
@@ -53,7 +55,9 @@ export default function Contact() {
           <div class="mx-20" data-aos="fade-in" data-aos-delay="400">
             <div class="py-10 default-card-bg">
               <h2 class="text-4xl text-center mb-5">Inviami un messaggio</h2>
-              <p class="text-yellow-200 text-2xl text-center mb-5 italic">*Work in progress</p>
+              <p class="text-yellow-200 text-2xl text-center mb-5 italic">
+                *Work in progress
+              </p>
               {/* <form
                 action=""
                 class="grid grid-cols-2 gap-5 mx-10 text-neutral-800"
@@ -92,9 +96,8 @@ export default function Contact() {
               </form> */}
             </div>
           </div>
-        </div> 
+        </div>
       </section>
-
 
       <Footer2 />
     </main>

@@ -1,35 +1,19 @@
 import "../main.css";
-import anime from "animejs";
 
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { useState } from "preact/hooks";
 
-export default function Navbar1({ nested }) {
+export default function Navbar1() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  if (isOpen) {
-    // anime({
-    //   targets: ".drawer-link",
-    //   opacity: 100,
-    //   duration: 1000,
-    //   delay: anime.stagger(100, {start:500}, {easing: "easeOutExpo"}),
-    // });
-  }
-
-  var instagramSrc = "./src/assets/icons/instagram-icon-colored.png";
-  var whatsappSrc = "./src/assets/icons/whatsapp-icon-colored.png";
-  var drawerSrc = "./src/assets/icons/hamburger-menu.png";
-
-  if (nested) {
-    instagramSrc = "../../src/assets/icons/instagram-icon-colored.png";
-    whatsappSrc = "../../src/assets/icons/whatsapp-icon-colored.png";
-    drawerSrc = "../../src/assets/icons/hamburger-menu.png";
-  }
+  var instagramSrc = "/icons/instagram-icon-colored.png";
+  var whatsappSrc = "/icons/whatsapp-icon-colored.png";
+  var drawerSrc = "/icons/hamburger-menu.png";
 
   return (
     <>
@@ -56,7 +40,7 @@ export default function Navbar1({ nested }) {
             Francesca Fotografie
           </a>
 
-          <div className="text-2xl hidden sm:flex sm:items-center sm:space-x-6">
+          <div className="text-2xl hidden sm:flex items-center space-x-2">
             <a href="/gallery" className="px-4 py-2 link-transition2">
               Galleria
             </a>
@@ -76,14 +60,14 @@ export default function Navbar1({ nested }) {
               <img
                 src={instagramSrc}
                 alt="logo instagram"
-                class="w-12 md:w-10 link-transition2 rounded-full"
+                class="w-12 md:w-10 link-transition2 mx-1 rounded-full"
               />
             </a>
             <a href="https://wa.me/393883032432" target="_blank">
               <img
                 src={whatsappSrc}
                 alt="logo whatsapp"
-                class="w-12 md:w-10 link-transition2 rounded-full"
+                class="w-12 md:w-10 link-transition2 mx-1 rounded-full"
               />
             </a>
           </div>
@@ -100,30 +84,30 @@ export default function Navbar1({ nested }) {
         <div class="bg-neutral-900 text-white p-10 w-full h-full">
           <button onClick={toggleDrawer}>
             <img
-              class="w-14 active:brightness-50 link-transition2"
-              src="./src/assets/icons/close-icon.png"
+              class="w-16 active:brightness-50 link-transition2"
+              src="/icons/close-icon.png"
               alt="close button"
             />
           </button>
 
-          <ul class="mt-10 ml-5 text-3xl">
-            <li class="drawer-link my-2 link-transition2">
+          <ul class="mt-10 ml-5 text-4xl">
+            <li class="drawer-link my-4 link-transition2">
               <a href="/"> Home </a>
             </li>
 
-            <li class="drawer-link my-2 link-transition2">
+            <li class="drawer-link my-4 link-transition2">
               <a href="/gallery"> Galleria </a>
             </li>
 
-            <li class="drawer-link my-2 link-transition2">
+            <li class="drawer-link my-4 link-transition2">
               <a href="/packs"> Pacchetti </a>
             </li>
 
-            <li class="drawer-link my-2 link-transition2">
+            <li class="drawer-link my-4 link-transition2">
               <a href="/about"> Chi sono </a>
             </li>
 
-            <li class="drawer-link my-2 link-transition2">
+            <li class="drawer-link my-4 link-transition2">
               <a href="/contatti"> Contatti </a>
             </li>
           </ul>
@@ -134,7 +118,7 @@ export default function Navbar1({ nested }) {
               <a href="https://www.instagram.com/francesca_fotografie/">
                 <img
                   class="w-14 mx-5"
-                  src="./src/assets/icons/instagram-icon.png"
+                  src="/icons/instagram-icon.png"
                   alt="instagram icon"
                 />
               </a>
@@ -143,7 +127,7 @@ export default function Navbar1({ nested }) {
               <a href="https://wa.me/393883032432">
                 <img
                   class="w-14"
-                  src="./src/assets/icons/whatsapp-icon.png"
+                  src="/icons/whatsapp-icon.png"
                   alt="whatsapp icon"
                 />
               </a>

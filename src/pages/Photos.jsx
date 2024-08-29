@@ -46,7 +46,7 @@ export function Photos({ photoCategory }) {
 
 function galleryBase({ content }) {
   return (
-    <Suspense fallback={<img src="../../src/assets/loading0.gif" alt={"loading..."} />}>
+    <>
       <Navbar1 nested={true} />
       <section id="generic-bg">
         <div id="gallery" class="w-full pt-36">
@@ -54,31 +54,29 @@ function galleryBase({ content }) {
         </div>
       </section>
       <Footer2 nested={true} />
-    </Suspense>
+    </>
   );
 }
 function galleryTitle({ title }) {
   return (
-    <header class="flex w-full justify-center" data-aos="fade-in">
-      <a href="/gallery" class="mx-7 w-10 absolute left-0 hover:brightness-50">
-        <img src="../../src/assets/icons/arrow-left.png" alt="arrow back" />
+    <header class="flex w-full justify-center items-center mb-10" data-aos="fade-in">
+      <a href="/gallery" class="mx-7 w-10 hover:brightness-50">
+        <img src="/icons/arrow-left.png" alt="arrow back" />
       </a>
-      <h1 class="text-center text-6xl font-medium mb-10">{title}</h1>
+      <h1 class="text-center text-6xl font-medium">{title}</h1>
     </header>
   );
 }
 
 function gridPhoto({ src }) {
   return (
-    <Suspense
-      fallback={<img src="../../src/assets/loading0.gif" alt={"loading"} />}
-    >
+    <Suspense fallback={<img src="/loading0.gif" alt={"loading"} />}>
       <a
         class="spotlight self-center"
         href={src}
         data-aos="zoom-in"
         // data-aos-once="true"
-        
+
         data-play="100"
         data-progress="true"
         data-title="false"
@@ -103,7 +101,7 @@ function gridPhotoSpan2({ src }) {
         href={src}
         data-aos="fade-in"
         // data-aos-once="true"
-        
+
         data-play="100"
         data-progress="true"
         data-title="false"
@@ -115,6 +113,16 @@ function gridPhotoSpan2({ src }) {
         />
       </a>
     </Suspense>
+  );
+}
+
+function pageDivider() {
+  return (
+    <img
+      class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12"
+      src="/images/divider4.png"
+      alt="divider pagina"
+    />
   );
 }
 
@@ -143,11 +151,7 @@ function battesimoGallery() {
         </div>
 
         {/* <hr class="mb-10 mt-5 w-2/3 md:w-1/2 lg:w-1/2 mx-auto border-2" /> */}
-        <img
-          class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12"
-          src="../../src/assets/images/divider4.png"
-          alt="divider pagina"
-        />
+        {pageDivider()}
 
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
@@ -186,11 +190,7 @@ function compleannoGallery() {
         </div>
 
         {/* <hr class="my-16 w-2/3 md:w-1/2 lg:w-1/2 mx-auto border-2" /> */}
-        <img
-          class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12"
-          src="../../src/assets/images/divider4.png"
-          alt="divider pagina"
-        />
+        {pageDivider()}
 
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
@@ -204,13 +204,9 @@ function compleannoGallery() {
             return gridPhoto({ src: photo });
           })}
         </div>
-        
-        <img
-          class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12"
-          src="../../src/assets/images/divider4.png"
-          alt="divider pagina"
-        />
-        
+
+        {pageDivider()}
+
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           // data-aos="fade-in"
@@ -272,11 +268,7 @@ function ritrattoGallery() {
           })}
         </div>
 
-        <img
-          class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12"
-          src="../../src/assets/images/divider4.png"
-          alt="divider pagina"
-        />
+        {pageDivider()}
 
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
@@ -289,11 +281,7 @@ function ritrattoGallery() {
           {gridPhoto({ src: ritratto2Landscape2 })}
         </div>
 
-        <img
-          class="mx-auto w-72 md:w-96 lg:w-96 xl:w-96 my-12"
-          src="../../src/assets/images/divider4.png"
-          alt="divider pagina"
-        />
+        {pageDivider()}
 
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"

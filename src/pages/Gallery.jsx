@@ -6,7 +6,7 @@ export default function Gallery({ setPhotoCategory }) {
 
 
   return (
-    <main id="bg2" class="text-black ">
+    <main class="bg2 bg-properties text-black ">
       <Navbar1 nested={false} />
       <section class="pt-32 w-full h-full">
         <h1
@@ -17,7 +17,7 @@ export default function Gallery({ setPhotoCategory }) {
         </h1>
         {/* <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in" /> */}
         <img
-          src="./src/assets/images/divider3-black.png"
+          src="/images/divider3-black.png"
           alt="divider pagina"
           class="mx-auto w-72 md:w-96 mb-10"
         />
