@@ -4,34 +4,55 @@ import { Link } from "../components/Links";
 
 export default function Landing() {
   globalThis.scrollTo({ top: 0, left: 0 });
+  
+  const carouselProperties={
+    autoPlay:true,
+    interval: 1000,
+    centerMode:true,
+    emulateTouch:true,
+    dynamicHeight:true,
+    infiniteLoop:true,
+    useKeyboardArrows:true,
+  };
+
   return (
-    <main class="bg1 bg-properties text-black overflow-x-hidden">
+    <main class="w-screen bg4 bg-properties text-black overflow-x-hidden">
       <Navbar1 nested={false} />
       <section className="flex items-center justify-center" id="main-section">
-        <LandingContent header="Francesca Calì" body="Fotografa per eventi" />
+        <img
+          src="cameraa.png"
+          className="absolute rotate-12 bg-center opacity-20 w-4/5 md:w-2/5"
+          alt="camera"
+        />
+        <LandingContent
+          header="Francesca Calì"
+          body="I miei scatti le vostre emozioni"
+        />
       </section>
-      <Footer2 nested={false}/>
+
+      <article className="w-screen p-10 mx-auto">
+
+      </article>
+
+      <Footer2 nested={false} />
     </main>
   );
-}
 
-// function LandingTitle({ header, body }) {
-//     return (
-//         <div className="mb-20 text-white"
-//             data-aos="fade-up"
-//             data-aos-delay="300"
-//             data-aos-duration="1000"
-//         >
-//             <h1 className="text-7xl"> {header} </h1>
-//             <p className="text-xl"> {body} </p>
-//         </div>
-//     );
-// }
+  function landingPhoto({ src }) {
+    return (
+      <img
+        src={src}
+        alt="foto"
+        className="more-rounded outline-dashed outline-white my-2"
+      />
+    );
+  }
+}
 
 function LandingContent({ header, body }) {
   return (
     <div
-      className="px-7 py-7"
+      className="px-7 py-7 z-40"
       data-aos="fade-up"
       data-aos-delay="200"
       data-aos-duration="1300"

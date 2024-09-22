@@ -98,9 +98,32 @@ body {
 .bg3 {
   background-image: url("/images/sfondi/3.jpeg");
 }
+.bg4 {
+  background-image: url("/images/sfondi/4.jpeg");
+}
+.bg5 {
+  background-image: url("/images/sfondi/5.jpeg");
+}
+.bg6 {
+  background-image: url("/images/sfondi/6.jpeg");
+}
+.bg7 {
+  background-image: url("/images/sfondi/7.jpeg");
+}
+.bg8{
+  background-image: url("images/sfondi/8.jpg");
+}
+.bg{
+  background-image: url("images/sfondi/9.jpg");
+}
 
 .bg-properties{
+  z-index: -80;
   @apply md:bg-cover md:bg-no-repeat md:bg-center;
+}
+
+.more-rounded{
+  border-radius: 2.5rem;
 }
 
 #landing-card-container {
@@ -156,7 +179,7 @@ body {
 }
 
 #stripe-laurea {
-  background-image: url("/images/laurea/bg2.jpg");
+  background-image: url("/images/laurea/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -164,6 +187,13 @@ body {
 
 #stripe-ritratto {
   background-image: url("/images/ritratto/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#stripe-soulmates {
+  background-image: url("/images/soulmates/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

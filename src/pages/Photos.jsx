@@ -1,25 +1,5 @@
 import Navbar1 from "../components/Navbars";
-import {
-  battesimoRow123,
-  battesimoRow4a,
-  battesimoRow4b,
-  battesimoRow5a,
-  battesmioRow5b,
-  battesimo2Landscape,
-  battesimo2Portrait,
-  compleannoLandscape,
-  compleanno2Landscape,
-  compleanno2Portrait,
-  compleanno3Portrait,
-  compleanno3Landscape,
-  laureaPhotos,
-  ritratto1Portrait,
-  ritratto1Landscape,
-  ritratto2Portrait,
-  ritratto2Landscape1,
-  ritratto2Landscape2,
-  ritratto3Portrait,
-} from "../photoSources";
+import { sources } from "../photoSources";
 import { Suspense } from "react";
 import Footer2 from "../components/Footer2";
 
@@ -35,6 +15,8 @@ export function Photos({ photoCategory }) {
       return galleryBase({ content: laureaGallery() });
     case "ritratto":
       return galleryBase({ content: ritrattoGallery() });
+    case "soulmates":
+      return galleryBase({ content: soulmatesGallery() });
     default:
       return (
         <h1 class="text-red-600 text-center text-7xl mt-16">
@@ -46,24 +28,23 @@ export function Photos({ photoCategory }) {
 
 function galleryBase({ content }) {
   return (
-    <>
+    <main className="bg4 text-black">
       <Navbar1 nested={true} />
-      <section id="generic-bg">
-        <div id="gallery" class="w-full pt-36">
-          {content}
-        </div>
-      </section>
+      <div class="w-full pt-36">{content}</div>
       <Footer2 nested={true} />
-    </>
+    </main>
   );
 }
 function galleryTitle({ title }) {
   return (
-    <header class="flex w-full justify-center items-center mb-10" data-aos="fade-in">
-      <a href="/gallery" class="mx-7 w-10 hover:brightness-50">
-        <img src="/icons/arrow-left.png" alt="arrow back" />
+    <header
+      class="flex w-full justify-center gap-5 items-center mb-10"
+      data-aos="fade-in"
+    >
+      <a href="/gallery" class="w-7 brightness-0 hover:brightness-50">
+        <img src="/icons/arrow-left.png" alt="freccia indietro" />
       </a>
-      <h1 class="text-center text-6xl font-medium">{title}</h1>
+      <h1 class="text-center text-4xl md:text-6xl font-medium">{title}</h1>
     </header>
   );
 }
@@ -81,11 +62,7 @@ function gridPhoto({ src }) {
         data-progress="true"
         data-title="false"
       >
-        <img
-          src={src}
-          class="w-auto outline outline-8 outline-black"
-          alt="fotografia"
-        />
+        <img src={src} class="w-auto" alt="fotografia" />
       </a>
     </Suspense>
   );
@@ -93,9 +70,7 @@ function gridPhoto({ src }) {
 
 function gridPhotoSpan2({ src }) {
   return (
-    <Suspense
-      fallback={<img src="../../src/assets/loading0.gif" alt={"loading"} />}
-    >
+    <Suspense fallback={<img src="loading0.gif" alt={"loading"} />}>
       <a
         class="spotlight self-center col-span-2"
         href={src}
@@ -106,11 +81,7 @@ function gridPhotoSpan2({ src }) {
         data-progress="true"
         data-title="false"
       >
-        <img
-          src={src}
-          class="w-auto outline outline-8 outline-black"
-          alt="fotografia"
-        />
+        <img src={src} class="w-auto" alt="fotografia" />
       </a>
     </Suspense>
   );
@@ -138,15 +109,15 @@ function battesimoGallery() {
           // data-aos-delay="200"
           // data-aos-once="true"
         >
-          {battesimoRow123.map((photo) => {
+          {sources.battesimoRow123.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          {battesimoRow4a.map((photo) => {
+          {sources.battesimoRow4a.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          {gridPhotoSpan2({ src: battesimoRow4b })}
-          {gridPhotoSpan2({ src: battesimoRow5a })}
-          {gridPhoto({ src: battesmioRow5b })}
+          {gridPhotoSpan2({ src: sources.battesimoRow4b })}
+          {gridPhotoSpan2({ src: sources.battesimoRow5a })}
+          {gridPhoto({ src: sources.battesmioRow5b })}
           <br />
         </div>
 
@@ -159,10 +130,10 @@ function battesimoGallery() {
           // data-aos-delay="200"
           // data-aos-once="true"
         >
-          {battesimo2Landscape.map((photo) => {
+          {sources.battesimo2Landscape.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          {battesimo2Portrait.map((photo) => {
+          {sources.battesimo2Portrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
@@ -181,26 +152,40 @@ function compleannoGallery() {
         <div
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           // data-aos="fade-in"
+        >
+          {sources.compleanno4Portrait.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+
+          {sources.compleanno4Landscape.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+        </div>
+
+        {pageDivider()}
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
+          // data-aos="fade-in"
+        >
+          {sources.compleanno3Landscape.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+
+          {sources.compleanno3Portrait.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+        </div>
+
+        {pageDivider()}
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
+          // data-aos="fade-in"
           // data-aos-delay="200"
           // data-aos-once="true"
         >
-          {compleannoLandscape.map((photo) => {
-            return gridPhoto({ src: photo });
-          })}
-        </div>
-
-        {/* <hr class="my-16 w-2/3 md:w-1/2 lg:w-1/2 mx-auto border-2" /> */}
-        {pageDivider()}
-
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
-          // data-aos="fade-in"
-        >
-          {compleanno2Landscape.map((photo) => {
-            return gridPhoto({ src: photo });
-          })}
-
-          {compleanno2Portrait.map((photo) => {
+          {sources.compleannoLandscape.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
@@ -211,11 +196,11 @@ function compleannoGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           // data-aos="fade-in"
         >
-          {compleanno3Landscape.map((photo) => {
+          {sources.compleanno2Landscape.map((photo) => {
             return gridPhoto({ src: photo });
           })}
 
-          {compleanno3Portrait.map((photo) => {
+          {sources.compleanno2Portrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
@@ -231,13 +216,8 @@ function laureaGallery() {
     <>
       {galleryTitle({ title: "Laurea" })}
       <article class="flex justify-evenly w-full">
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
-          // data-aos="fade-in"
-          // data-aos-delay="200"
-          // data-aos-once="true"
-        >
-          {laureaPhotos.map((photo) => {
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2">
+          {sources.laureaPhotos.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
@@ -259,11 +239,11 @@ function ritrattoGallery() {
           data-aos-delay="200"
           data-aos-once="true"
         >
-          {ritratto1Portrait.map((photo) => {
+          {sources.ritratto1Portrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
 
-          {ritratto1Landscape.map((photo) => {
+          {sources.ritratto1Landscape.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>
@@ -274,11 +254,11 @@ function ritrattoGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
         >
-          {ritratto2Portrait.map((photo) => {
+          {sources.ritratto2Portrait.map((photo) => {
             return gridPhoto({ src: photo });
           })}
-          {gridPhoto({ src: ritratto2Landscape1 })}
-          {gridPhoto({ src: ritratto2Landscape2 })}
+          {gridPhoto({ src: sources.ritratto2Landscape1 })}
+          {gridPhoto({ src: sources.ritratto2Landscape2 })}
         </div>
 
         {pageDivider()}
@@ -287,7 +267,24 @@ function ritrattoGallery() {
           class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2"
           data-aos="fade-in"
         >
-          {ritratto3Portrait.map((photo) => {
+          {sources.ritratto3Portrait.map((photo) => {
+            return gridPhoto({ src: photo });
+          })}
+        </div>
+      </article>
+    </>
+  );
+}
+
+// SOULMATES ===========================================
+
+function soulmatesGallery() {
+  return (
+    <>
+      {galleryTitle({ title: "Soulmates" })}
+      <article class="flex justify-evenly w-full">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-2">
+          {sources.soulmates.map((photo) => {
             return gridPhoto({ src: photo });
           })}
         </div>

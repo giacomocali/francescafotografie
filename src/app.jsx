@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './main.css'
+
 import spotlight from 'spotlight.js';
 
 import { Router } from 'preact-router';
@@ -15,6 +16,7 @@ import Packs from './pages/Packs';
 import { Photos } from './pages/Photos';
 import { NotFound } from './pages/NotFound.jsx';
 
+
 export function App() {
   AOS.init();
   const [photoCategory, setPhotoCategory] = useState(()=>{
@@ -27,6 +29,7 @@ export function App() {
   useEffect(()=>{
     localStorage.setItem("photoCategory", photoCategory)
   }, [photoCategory]);
+  
 
   return (
       <Router>

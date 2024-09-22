@@ -3,27 +3,23 @@ import Footer2 from "../components/Footer2";
 
 function aboutMeDescription() {
   return (
-    <div class="text-wrap">
+    <div class="text-wrap text-lg md:text-xl">
       La fotografia è sempre stata una mia grande passione e ho deciso di
-      immergermici a capofitto <br />
-      quando ho capito che valorizzare le emozioni e i ricordi delle persone mi
-      rendeva più felice <br />
-      e soddisfatta di qualsiasi altra cosa. Riuscire a immortalare la
-      naturalezza, la spontaneità e le <br />
+      immergermici a capofitto quando ho capito che valorizzare le emozioni e i
+      ricordi delle persone mi rendeva più felice e soddisfatta di qualsiasi
+      altra cosa. Riuscire a immortalare la naturalezza, la spontaneità e le
       connessioni intime è quello che più mi riempie il cuore di gioia. Se
-      deciderai di affidarti a me <br />
-      farò di tutto per rendere la tua sessione fotografica un’esperienza
-      positiva, intima e soprattutto <br />
-      celebrativa della persona che sei o del legame che ti unisce alle persone{" "}
-      <br /> che condivideranno quest'esperienza con te.
+      deciderai di affidarti a me farò di tutto per rendere la tua sessione
+      fotografica un’esperienza positiva, intima e soprattutto celebrativa della
+      persona che sei o del legame che ti unisce alle persone che condivideranno
+      quest'esperienza con te.
     </div>
   );
 }
 
-
 export default function AboutMeOld() {
   return (
-    <main class="bg1 bg-properties text-black overflow-x-hidden">
+    <main class="bg6 bg-properties text-black overflow-x-hidden">
       <Navbar1 nested={false} />
 
       <section
@@ -47,13 +43,14 @@ export default function AboutMeOld() {
           data-aos-delay="200"
           data-aos-duration="1000"
           data-aos-once="true"
+          className="w-1/2"
         >
           <h1 class="text-5xl mb-3"> Chi sono: </h1>
           <div class="text-2xl">{aboutMeDescription()}</div>
         </div>
       </section>
 
-      <section class="py-40 block md:hidden justify-around items-center mx-10">
+      <section class="py-28 block md:hidden justify-around items-center mx-10">
         <img
           src="/images/francesca2.jpg"
           alt="foto francesca"

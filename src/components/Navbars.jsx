@@ -18,7 +18,7 @@ export default function Navbar1() {
   return (
     <>
       <nav
-        className="backdrop-blur-lg fixed z-40 w-full py-7 text-lg"
+        className="backdrop-blur-lg fixed z-40 w-screen py-7 text-lg"
         id="main-nav"
       >
         <div className="flex justify-around items-center font-light">
@@ -29,7 +29,7 @@ export default function Navbar1() {
             <img
               src={drawerSrc}
               alt="immagine"
-              class="w-8 shrink link-transition2 active:brightness-50 transition-all duration-75"
+              class="w-8 link-transition2 active:brightness-50 transition-all duration-75"
             />
           </button>
 

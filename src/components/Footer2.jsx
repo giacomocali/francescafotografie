@@ -39,7 +39,7 @@ export default function Footer2() {
 
       <div class="text-center py-5">
         <a
-          href="www.giacomodev.com"
+          href="https://www.giacomodev.com"
           target="_blank"
           class="text-neutral-300 hover:text-neutral-500 active:text-blue-700"
         >

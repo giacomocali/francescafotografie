@@ -1,5 +1,4 @@
 import "../main.css";
-
 // CONTACT CARD ================================================
 
 export function ContactCard({ type }) {
@@ -46,11 +45,10 @@ export function ContactCardBase({ content }) {
       id="contact-card"
       class="copy-btn -z-0 mx-5 
       active:scale-90 transition-transform duration-75 
-      min-w-64 md:w-64
-      px-10 md:px-0 default-card-bg"
+      w-80 text-center
+      md:w-60 md:px-0 default-card-bg"
     >
       <div class={specificClass}>
-        {/* add the bg image class here */}
         <h3 className="text-5xl mx-auto z-10 p-2">{content.title}</h3>
         <small class="italic text-center text-lg"> Clicca per copiare </small>
       </div>
@@ -82,12 +80,11 @@ export function ContactButton({ type }) {
       target="_blank"
       rel="noreferrer"
       id="contact-card"
-      class="copy-btn -z-0 mx-5 active:scale-90
-      transition-transform duration-75 min-w-64 md:w-64 px-10 md:px-0
-      default-card-bg"
+      class="-z-0 md:mx-5 md:my-0 m-10 active:scale-90
+      transition-transform duration-75 w-1/2 md:w-fit md:scale-100
+      default-card-bg bg-center"
     >
       <div class={cls}>
-        {/* add the bg image class here */}
         <h3 className="text-center text-5xl z-10 p-2">{title}</h3>
         <p class="italic text-center text-lg"> Collegamento ➚ </p>
       </div>
@@ -98,35 +95,29 @@ export function ContactButton({ type }) {
 // PACKETS CARD ================================================
 
 export function PacketsCard3({ title, color, description }) {
-  /* 
-    big: w-1/4 h-98
-    medium: w-1/2 h-52
-    small:w-2/3 h-40
-  */
-  var bgClass =
-    " z-0 w-5/6 md:w-1/2 lg:w-1/3 xl:w-1/4" +
-    " lg:mb-10 h-fit pb" +
-    " rounded-3xl text-neutral-800" +
-    " text-center mx-5 transition-all hover:scale-110";
+
+  var bgClass ="";
   switch (color) {
     case "pack1":
-      bgClass = bgClass + " bg-orange-300";
+      bgClass = " bg-orange-300";
       break;
     case "pack2":
-      bgClass = bgClass + " bg-blue-300";
+      bgClass = " bg-blue-300";
       break;
     case "pack3":
-      bgClass = bgClass + " bg-purple-300";
+      bgClass = " bg-purple-300";
       break;
   }
 
   return (
-    <div class={bgClass}>
-      <h2 class="flex justify-between text-4xl text-left ml-5 text-white mt-5">
+    <div class={"z-0 h-fit rounded-3xl text-neutral-800 "+
+    "text-center mx-5 transition-all hover:scale-110"+
+    bgClass}>
+      <h2 class="relative w-full text-4xl text-left text-white pb-10 pt-5 md:pt-0 md:pb-20 mt-5 ml-5">
         {title}
         <img
           src="/images/camera5.png"
-          class="-z-20 scale-150 mr-10 max-w-32 max-h-32 "
+          class="absolute opacity-75 top-0 right-0 md:right-5 scale-100 md:scale-150 mr-10 w-32 h-32 "
           alt="icona fotocamera"
         />
       </h2>

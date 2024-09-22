@@ -4,7 +4,9 @@ import { ContactCard, ContactButton } from "../components/Cards";
 
 import ClipboardJS from "clipboard";
 
-import emailjs from "@emailjs/browser";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function Contact() {
   globalThis.scrollTo({ top: 0, left: 0 });
@@ -27,74 +29,71 @@ export default function Contact() {
     console.error("errore");
   });
 
+  const contactSettings = {
+    dots: true, // Shows dots for navigation
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1, // Number of cards to show at once (adjust for desktop)
+    slidesToScroll: 1, // Number of cards to scroll at once
+    customPaging: () => (
+      <div className="w-3 h-3 bg-black rounded-full mt-2"> </div>
+    ),
+    responsive: [
+      {
+        breakpoint: 768, // For mobile responsiveness
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024, // For tablets
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <main class="bg1 bg-properties h-screen text-black">
+    <main class="bg4 bg-properties h-screen text-black">
       <Navbar1 nested={false} />
 
-      <section class="pt-40" id="main-section">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-          <div class="py-10">
-            <h2
-              class="mb-5 w-full text-5xl text-center font-medium"
-              data-aos="zoom-out"
-            >
-              Contattami
-            </h2>
-            <hr class="h-0.5 bg-black w-80 mx-auto" />
-            <div
-              class="py-10 flex xl:justify-around overflow-x-auto scroll-snap-x"
-              data-aos="fade-in"
-              data-aos-delay="200"
-            >
-              <ContactCard type={"email"} />
-              <ContactButton type={"whatsapp"} />
-              <ContactButton type={"instagram"} />
-            </div>
+      <section class="pt-20" id="main-section">
+        <div class="py-10">
+          <h2
+            class="w-full text-4xl md:text-6xl lg:text-7xl text-center font-medium"
+            data-aos="zoom-out"
+          >
+            Contatti
+
+          </h2>
+          <img
+            src="/images/divider4.png"
+            alt="divider pagina"
+            class="mx-auto w-72 md:w-96 mt-2 mb-5"
+          />
+
+          <div className="flex w-screen justify-center items-center md:hidden my-5">
+            <p className="text-xl"> Scorri </p>
+            <img src="icons/scroll-arrow.png" className="ml-2 w-5"/>
           </div>
 
-          <div class="mx-20" data-aos="fade-in" data-aos-delay="400">
-            <div class="py-10 default-card-bg">
-              <h2 class="text-4xl text-center mb-5">Inviami un messaggio</h2>
-              <p class="text-yellow-200 text-2xl text-center mb-5 italic">
-                *Work in progress
-              </p>
-              {/* <form
-                action=""
-                class="grid grid-cols-2 gap-5 mx-10 text-neutral-800"
-              >
-                <input
-                  type="text"
-                  class="py-2 rounded-xl outline-yellow-400"
-                  placeholder="  Nome Completo"
-                  required="true"
-                />
-                <input
-                  type="email"
-                  class="py-2 rounded-xl outline-yellow-400"
-                  placeholder="  Email"
-                  required="true"
-                />
-                <input
-                  type="text"
-                  class="py-2 rounded-xl outline-yellow-400"
-                  placeholder="  Oggetto"
-                />
-                <textarea
-                  class="py-2 rounded-xl outline-yellow-400"
-                  placeholder="  Messaggio"
-                  required="true"
-                ></textarea>
-                <div class="bg-white py-3 text-center col-span-2 rounded-xl">
-                  Captcha cloudflare qui
-                </div>
-                <button
-                  class="rounded-xl bg-blue-600 hover:bg-blue-700 w-full text-white py-3 col-span-2"
-                  type="submit"
-                >
-                  Invia
-                </button>
-              </form> */}
-            </div>
+          <div
+            class="hidden md:flex md:justify-center"
+            data-aos="fade-in"
+            data-aos-delay="200"
+          >
+            <ContactButton type={"whatsapp"} />
+            <ContactButton type={"instagram"} />
+          </div>
+
+          <div className="md:hidden">
+            <Slider {...contactSettings}>
+              <ContactButton type={"whatsapp"} />
+              <ContactButton type={"instagram"} />
+            </Slider>
           </div>
         </div>
       </section>

@@ -6,20 +6,19 @@ export default function Gallery({ setPhotoCategory }) {
 
 
   return (
-    <main class="bg2 bg-properties text-black ">
+    <main class="bg4 bg-properties text-black">
       <Navbar1 nested={false} />
       <section class="pt-32 w-full h-full">
         <h1
-          class="text-5xl md:text-6xl lg:text-7xl xl:text-7xl text-center font-medium"
+          class="text-4xl md:text-6xl lg:text-7xl text-center font-medium"
           data-aos="zoom-out"
         >
           Galleria
         </h1>
-        {/* <hr class="mx-auto w-3/4 md:w-1/2 lg:w-1/3 mb-10" data-aos="fade-in" /> */}
         <img
-          src="/images/divider3-black.png"
+          src="/images/divider4.png"
           alt="divider pagina"
-          class="mx-auto w-72 md:w-96 mb-10"
+          class="mx-auto w-72 md:w-96 mt-2 mb-5"
         />
 
         <div data-aos="fade-in" data-aos-delay="200">
@@ -41,6 +40,11 @@ export default function Gallery({ setPhotoCategory }) {
           <GalleryStripe
             text={"Ritratto"}
             category={"ritratto"}
+            setCategory={setPhotoCategory}
+          />
+          <GalleryStripe
+            text={"Soulmates"}
+            category={"soulmates"}
             setCategory={setPhotoCategory}
           />
           <Footer2 />
@@ -70,7 +74,7 @@ function GalleryStripe({ text, category, setCategory }) {
 
 function StripeText({ text }) {
   return (
-    <h3 className="text-4xl md:text-7xl lg:text-7xl text-white text-center font-light">
+    <h3 className="text-3xl md:text-6xl lg:text-7xl text-white text-center font-light">
       {text}
     </h3>
   );
