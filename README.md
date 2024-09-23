@@ -7,6 +7,7 @@ Sito portfolio per i lavori di fotografia di Francesca Calì.
 - Vite
 - Preact
 - Tailwind CSS
+- React Router
 - React Modern Drawer
 - React Slick
 - Cliipboard.js
