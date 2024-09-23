@@ -1,7 +1,7 @@
 import Navbar1 from "../components/Navbars";
-import { sources } from "../photoSources";
-import { Suspense } from "react";
 import Footer2 from "../components/Footer2";
+import { sources } from "../photoSources";
+// import { Suspense, lazy } from "preact/compat";
 
 export function Photos({ photoCategory }) {
   globalThis.scrollTo({ top: 0, left: 0 });
@@ -51,39 +51,31 @@ function galleryTitle({ title }) {
 
 function gridPhoto({ src }) {
   return (
-    <Suspense fallback={<img src="/loading0.gif" alt={"loading"} />}>
-      <a
-        class="spotlight self-center"
-        href={src}
-        data-aos="zoom-in"
-        // data-aos-once="true"
-
-        data-play="100"
-        data-progress="true"
-        data-title="false"
-      >
-        <img src={src} class="w-auto" alt="fotografia" />
-      </a>
-    </Suspense>
+    <a
+      class="spotlight self-center"
+      href={src}
+      data-aos="zoom-in"
+      data-play="100"
+      data-progress="true"
+      data-title="false"
+    >
+      <img src={src} class="w-auto" alt="fotografia" />
+    </a>
   );
 }
 
 function gridPhotoSpan2({ src }) {
   return (
-    <Suspense fallback={<img src="loading0.gif" alt={"loading"} />}>
-      <a
-        class="spotlight self-center col-span-2"
-        href={src}
-        data-aos="fade-in"
-        // data-aos-once="true"
-
-        data-play="100"
-        data-progress="true"
-        data-title="false"
-      >
-        <img src={src} class="w-auto" alt="fotografia" />
-      </a>
-    </Suspense>
+    <a
+      class="spotlight self-center col-span-2"
+      href={src}
+      data-aos="fade-in"
+      data-play="100"
+      data-progress="true"
+      data-title="false"
+    >
+      <img src={src} class="w-auto" alt="fotografia" />
+    </a>
   );
 }
 
