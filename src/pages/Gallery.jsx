@@ -22,6 +22,7 @@ export default function Gallery({ setPhotoCategory }) {
         />
 
         <div data-aos="fade-in" data-aos-delay="200">
+          {/* cambiare stripe */}
           <GalleryStripe
             text={"Reportage battesimo"}
             category={"battesimo"}

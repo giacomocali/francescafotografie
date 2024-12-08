@@ -7,6 +7,7 @@ export function Photos({ photoCategory }) {
   globalThis.scrollTo({ top: 0, left: 0 });
 
   switch (photoCategory) {
+    // cambiare categorie
     case "battesimo":
       return galleryBase({ content: battesimoGallery() });
     case "compleanno":
